@@ -1,3 +1,12 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
 /* Header Navigation */
 header {
     background-color: #ff4500;
@@ -10,6 +19,12 @@ header .top-nav {
     align-items: center;
 }
 
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+}
+
 .top-nav ul {
     list-style: none;
     display: flex;
@@ -18,59 +33,95 @@ header .top-nav {
     margin: 0;
 }
 
+.top-nav ul li {
+    position: relative;
+}
+
 .top-nav ul li a {
+    padding: 10px 15px;
+    display: inline-block;
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1rem;
 }
 
 .top-nav ul li a:hover {
-    color: #000;
+    background-color: #000;
+    color: #ff4500;
+    border-radius: 5px;
 }
 
-/* Display Page */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    list-style: none;
+    top: 40px;
+    left: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+}
+
+/* Main Layout */
+main {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.sidebar-left, .sidebar-right {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 10px;
+}
+
 .display-page {
     text-align: center;
-    padding: 50px 20px;
+    padding: 50px;
     background-color: #444;
     border-radius: 10px;
-    color: #fff;
-    margin: 20px;
+}
+
+.display-page h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.display-page p {
+    font-size: 1.2rem;
+    margin: 0;
 }
 
 /* Footer */
 footer {
     background-color: #222;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
+}
+
+footer .footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 footer .footer-nav button {
     background-color: #ff4500;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    margin: 5px;
+    padding: 10px 15px;
     border-radius: 5px;
+    font-size: 1rem;
     cursor: pointer;
 }
 
 footer .footer-nav button:hover {
     background-color: #d43700;
-}
-
-/* Modal */
-.modal {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #333;
-    padding: 30px;
-    border-radius: 10px;
-    color: #fff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
