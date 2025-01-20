@@ -10,7 +10,7 @@ body {
 /* Header Navigation */
 header {
     background-color: #ff4500;
-    padding: 20px;
+    padding: 15px 20px;
 }
 
 header .top-nav {
@@ -28,7 +28,7 @@ header .logo {
 .top-nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 20px;
     padding: 0;
     margin: 0;
 }
@@ -39,16 +39,15 @@ header .logo {
 
 .top-nav ul li a {
     padding: 10px 15px;
-    display: inline-block;
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    border-radius: 5px;
 }
 
 .top-nav ul li a:hover {
     background-color: #000;
     color: #ff4500;
-    border-radius: 5px;
 }
 
 .dropdown-menu {
@@ -79,6 +78,9 @@ main {
     background-color: #333;
     padding: 15px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .display-page {
@@ -86,6 +88,8 @@ main {
     padding: 50px;
     background-color: #444;
     border-radius: 10px;
+    margin: 0 auto;
+    max-width: 800px;
 }
 
 .display-page h1 {
@@ -95,7 +99,6 @@ main {
 
 .display-page p {
     font-size: 1.2rem;
-    margin: 0;
 }
 
 /* Footer */
@@ -122,6 +125,15 @@ footer .footer-nav button {
 }
 
 footer .footer-nav button:hover {
+    background-color: #d43700;
+}
+
+/* Add Hover Effects for Buttons */
+button {
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
     background-color: #d43700;
 }
 
