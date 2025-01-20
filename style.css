@@ -20,7 +20,7 @@ header .top-nav {
 }
 
 header .logo {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #fff;
 }
@@ -76,11 +76,16 @@ main {
 
 .sidebar-left, .sidebar-right {
     background-color: #333;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.sidebar-left h3, .sidebar-right h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
 }
 
 .display-page {
@@ -93,12 +98,13 @@ main {
 }
 
 .display-page h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
 .display-page p {
     font-size: 1.2rem;
+    color: #ddd;
 }
 
 /* Footer */
@@ -122,18 +128,21 @@ footer .footer-nav button {
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 footer .footer-nav button:hover {
     background-color: #d43700;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Add Hover Effects for Buttons */
+/* Buttons */
 button {
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 button:hover {
     background-color: #d43700;
 }
+
 
