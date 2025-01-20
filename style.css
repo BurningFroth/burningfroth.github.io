@@ -1,77 +1,42 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    background-color: #1a1a1a;
-    color: #fff;
-}
-
-/* Header */
+/* Header Navigation */
 header {
     background-color: #ff4500;
-    padding: 10px;
+    padding: 20px;
+}
+
+header .top-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
 .top-nav ul {
     list-style: none;
-    padding: 0;
     display: flex;
-    gap: 20px;
-}
-
-.top-nav ul li {
-    position: relative;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
 }
 
 .top-nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    padding: 10px;
-    list-style: none;
-    top: 20px;
-    left: 0;
+.top-nav ul li a:hover {
+    color: #000;
 }
 
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-/* Main Layout */
-main {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    gap: 10px;
-    padding: 20px;
-}
-
-.sidebar-left, .sidebar-right {
-    background-color: #333;
-    padding: 10px;
-    border-radius: 5px;
-}
-
+/* Display Page */
 .display-page {
-    background-color: #444;
-    padding: 20px;
-    border-radius: 5px;
     text-align: center;
+    padding: 50px 20px;
+    background-color: #444;
+    border-radius: 10px;
+    color: #fff;
+    margin: 20px;
 }
 
 /* Footer */
@@ -81,10 +46,18 @@ footer {
     text-align: center;
 }
 
-footer .footer-nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+footer .footer-nav button {
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer .footer-nav button:hover {
+    background-color: #d43700;
 }
 
 /* Modal */
@@ -95,12 +68,9 @@ footer .footer-nav {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #333;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px #000;
+    padding: 30px;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-.modal-content {
-    color: #fff;
-    text-align: center;
-}
