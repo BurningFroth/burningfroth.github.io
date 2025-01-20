@@ -1,18 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BurningFroth</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
-        <h1>Welcome to BurningFroth</h1>
+        <nav class="top-nav">
+            <div class="logo">BurningFroth</div>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="#">Leaderboards</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Leaderboard 1</a></li>
+                        <li><a href="#">Leaderboard 2</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Milestone Categories</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Milestone 1</a></li>
+                        <li><a href="#">Milestone 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </nav>
     </header>
+
+    <!-- Main Layout -->
     <main>
-        <p>Explore the future of Froth-burning milestones and leaderboards!</p>
+        <!-- Sidebar Left -->
+        <aside class="sidebar-left">
+            <section class="live-prices">
+                <h3>Live Prices</h3>
+                <p>Froth: $0.XX</p>
+                <p>Liquidity Token: $0.XX</p>
+                <p>Burn Token: $0.XX</p>
+            </section>
+            <section class="community-feed">
+                <h3>Community Feed</h3>
+                <p>Latest burns and milestones here...</p>
+            </section>
+        </aside>
+
+        <!-- Display Page -->
+        <section class="display-page">
+            <h1>Welcome to BurningFroth</h1>
+            <p>Explore the future of Froth-burning milestones and leaderboards!</p>
+        </section>
+
+        <!-- Sidebar Right -->
+        <aside class="sidebar-right">
+            <section class="tally-trade">
+                <h3>Tally Trade</h3>
+                <button>Claim Tally</button>
+            </section>
+            <section class="dex">
+                <h3>DEX</h3>
+                <button>Open DEX</button>
+            </section>
+        </aside>
     </main>
+
+    <!-- Footer Section -->
     <footer>
+        <div class="footer-nav">
+            <button>Buy Froth</button>
+            <button class="mint-btn">Mint</button>
+            <button>Burn Froth</button>
+        </div>
         <p>&copy; 2025 BurningFroth. All rights reserved.</p>
     </footer>
+
+    <!-- Modal for Mint -->
+    <div class="modal" id="mint-modal">
+        <div class="modal-content">
+            <h2>Mint Information</h2>
+            <p>Number of NFTs Minted: X</p>
+            <p>Burn Tokens Generated: X</p>
+            <p>Liquidity Tokens Generated: X</p>
+            <button>Close</button>
+        </div>
+    </div>
 </body>
 </html>
