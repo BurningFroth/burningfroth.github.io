@@ -11,8 +11,7 @@
         <div class="logo">BurningFroth</div>
         <nav>
             <ul class="menu">
-                <li>
-                    <a href="#">Leaderboards</a>
+                <li>Leaderboards
                     <ul class="submenu">
                         <li><a href="#">Burn Milestones</a></li>
                         <li><a href="#">Liquidity Milestones</a></li>
@@ -21,8 +20,7 @@
                         <li><a href="#">Engagement Milestones</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#">Milestone Categories</a>
+                <li>Milestone Categories
                     <ul class="submenu">
                         <li><a href="#">Starter NFT Mint Milestones</a></li>
                         <li><a href="#">High-Spending Mint Milestones</a></li>
@@ -38,27 +36,21 @@
 
     <main>
         <aside class="sidebar">
-            <section>
-                <h2>Live Prices</h2>
-                <p>Froth: $0.XX</p>
-                <p>Liquidity Token: $0.XX</p>
-                <p>Burn Token: $0.XX</p>
-            </section>
-            <section>
-                <h2>Community Feed</h2>
-                <p>Latest burns and milestones here...</p>
-            </section>
+            <h2>Live Prices</h2>
+            <p>Froth: $0.XX</p>
+            <p>Liquidity Token: $0.XX</p>
+            <p>Burn Token: $0.XX</p>
+            <h2>Community Feed</h2>
+            <p>Latest burns and milestones here...</p>
         </aside>
-
         <section class="display">
             <h1>Welcome to BurningFroth</h1>
             <p>Explore the future of Froth-burning milestones and leaderboards!</p>
         </section>
-
-        <div class="bottom-left">
+        <aside class="bottom-left">
             <button>Claim Tally</button>
             <button>Open DEX</button>
-        </div>
+        </aside>
     </main>
 
     <footer>
