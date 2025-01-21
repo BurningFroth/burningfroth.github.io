@@ -1,105 +1,49 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+ </style>
+</head>
+<body>
+    <header>
+        <div class="logo">BurningFroth</div>
+        <ul class="menu">
+            <li>
+                Leaderboards
+                <ul class="submenu">
+                    <li><a href="#">Burn Milestones</a></li>
+                    <li><a href="#">Liquidity Milestones</a></li>
+                    <li><a href="#">Profile & Power</a></li>
+                    <li><a href="#">Social Milestones</a></li>
+                    <li><a href="#">Engagement Milestones</a></li>
+                </ul>
+            </li>
+            <li>
+                Milestone Categories
+                <ul class="submenu">
+                    <li><a href="#">Starter NFT Mint Milestones</a></li>
+                    <li><a href="#">High-Spending Mint Milestones</a></li>
+                    <li><a href="#">Trading Volume Milestones</a></li>
+                    <li><a href="#">Secondary Sales Milestones</a></li>
+                    <li><a href="#">Direct Burn Page Milestones</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">NFT Marketplace</a></li>
+        </ul>
+    </header>
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #111;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+    <main>
+        <div class="display">
+            <h1>Welcome to BurningFroth</h1>
+            <p>Explore the future of Froth-burning milestones and leaderboards!</p>
+            <div class="actions">
+                <button>Buy Froth</button>
+                <button>Mint</button>
+                <button>Burn Froth</button>
+            </div>
+            <button class="claim-tally">Claim Tally</button>
+        </div>
+    </main>
 
-/* Header */
-header {
-    background-color: #FF4500;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-}
-
-.menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.menu li {
-    position: relative;
-}
-
-.menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Main Section Styling */
-main {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
-}
-
-.welcome {
-    max-width: 600px;
-}
-
-.welcome h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.welcome p {
-    font-size: 18px;
-    margin-top: 10px;
-    color: #ccc;
-}
-
-/* Buttons Section */
-.bottom-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin: 30px 0;
-}
-
-.bottom-buttons button {
-    background-color: #FF4500;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.bottom-buttons button:hover {
-    background-color: #ff5733;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
+    <footer>
+        <p>&copy; 2025 BurningFroth. All rights reserved.</p>
+    </footer>
+</body>
+</html>
