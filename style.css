@@ -23,14 +23,17 @@ header {
     justify-content: space-between;
 }
 
-.logo-container img {
-    height: 50px;
-    background: none; /* Ensure no background color */
+/* Adjusting Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adds space between the logo and text */
 }
 
-
 .logo-container img {
-    height: 50px;
+    height: 60px; /* Adjust height as needed */
+    max-width: 100%; /* Ensure it scales properly */
+    object-fit: contain; /* Ensures the image fits within its bounds */
 }
 
 nav ul {
