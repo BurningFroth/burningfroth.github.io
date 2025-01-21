@@ -23,45 +23,22 @@ header {
     align-items: center;
 }
 
-header .menu {
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
-header .menu > li {
-    position: relative;
+.menu li {
+    cursor: pointer;
 }
 
-header .menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-header .menu .submenu {
-    display: none;
-    position: absolute;
-    background-color: #222;
-    list-style: none;
-    padding: 10px;
-    border-radius: 4px;
-    top: 100%;
-    left: 0;
-}
-
-header .menu > li:hover .submenu {
-    display: block;
-}
-
-header .menu .submenu li a {
-    color: white;
-    text-decoration: none;
-    padding: 5px;
-    display: block;
-}
-
-/* Main Display */
+/* Main */
 main {
     flex-grow: 1;
     display: flex;
@@ -70,77 +47,59 @@ main {
     padding: 20px;
 }
 
-.display-page {
-    background-color: #333;
-    color: white;
-    padding: 40px;
-    border-radius: 4px;
-    text-align: center;
+.display {
     width: 100%;
     max-width: 1200px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-/* Welcome Section */
-.welcome-section {
-    margin-top: auto;
-    margin-bottom: auto;
+    background-color: #444;
+    padding: 60px;
+    border-radius: 4px;
     text-align: center;
+    position: relative;
 }
 
 /* Bottom Buttons */
 .bottom-buttons {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 20px;
 }
 
-.bottom-buttons button {
+.btn {
     background-color: #FF4500;
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
-    font-size: 16px;
     cursor: pointer;
 }
 
-.bottom-buttons .mint-button {
-    border-radius: 50%; /* Circular button */
-    padding: 20px; /* Larger for circular look */
-    font-size: 18px;
-    width: 60px;
-    height: 60px;
+.btn:hover {
+    background-color: #e03d00;
 }
 
-.bottom-buttons button:hover {
-    background-color: #e63e00;
-}
-
-/* Claim Tally Button */
-.claim-tally {
-    flex-grow: 1;
-    padding: 10px 40px;
-    font-size: 16px;
-    text-align: center;
-    background-color: #444;
-    margin-top: 10px;
+.btn-tally {
+    background-color: #666;
+    color: white;
     border: none;
+    padding: 10px 30px;
     border-radius: 4px;
+    cursor: pointer;
 }
 
-.claim-tally:hover {
+.btn-tally:hover {
     background-color: #555;
 }
 
 /* Footer */
 footer {
+    background-color: #000;
+    color: white;
+    padding: 10px 20px;
     text-align: center;
     font-size: 14px;
-    color: white;
-    padding: 10px;
+    margin-top: 10px;
 }
