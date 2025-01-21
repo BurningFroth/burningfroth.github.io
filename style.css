@@ -23,11 +23,11 @@ header {
     justify-content: space-between;
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.logo-container img {
+    height: 50px;
+    background: none; /* Ensure no background color */
 }
+
 
 .logo-container img {
     height: 50px;
