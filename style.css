@@ -15,7 +15,7 @@ header {
 
 header .top-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Centered navigation */
     align-items: center;
 }
 
@@ -23,6 +23,7 @@ header .logo {
     font-size: 2rem;
     font-weight: bold;
     color: #fff;
+    margin-right: auto; /* Aligns logo to the left */
 }
 
 .top-nav ul {
@@ -43,6 +44,7 @@ header .logo {
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .top-nav ul li a:hover {
@@ -50,20 +52,36 @@ header .logo {
     color: #ff4500;
 }
 
+/* Dropdown Styling */
 .dropdown-menu {
     display: none;
     position: absolute;
     background-color: #333;
-    padding: 10px;
-    border-radius: 5px;
     list-style: none;
-    top: 40px;
-    left: 0;
+    padding: 10px;
+    margin: 0;
+    border-radius: 5px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
 }
 
 .dropdown:hover .dropdown-menu {
     display: block;
-    opacity: 1;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #444;
+    color: #ff4500;
 }
 
 /* Main Layout */
@@ -74,6 +92,7 @@ main {
     padding: 20px;
 }
 
+/* Sidebar Panels */
 .sidebar-left, .sidebar-right {
     background-color: #333;
     padding: 20px;
@@ -88,6 +107,11 @@ main {
     font-size: 1.2rem;
 }
 
+.sidebar-left p, .sidebar-right button {
+    font-size: 1rem;
+}
+
+/* Display Page */
 .display-page {
     text-align: center;
     padding: 50px;
@@ -129,6 +153,7 @@ footer .footer-nav button {
     font-size: 1rem;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 footer .footer-nav button:hover {
@@ -144,6 +169,22 @@ button {
 button:hover {
     background-color: #d43700;
 }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar-left, .sidebar-right {
+        order: 1; /* Ensure sidebars stack neatly */
+    }
+
+    .display-page {
+        order: 2;
+    }
+}
+
 
 
 
