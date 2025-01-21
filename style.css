@@ -56,8 +56,11 @@ header {
 .submenu a {
     color: white;
     text-decoration: none;
-    display: block;
-    margin: 5px 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
 }
 
 /* Main */
@@ -75,42 +78,40 @@ main {
     border-radius: 4px;
 }
 
-.sidebar-buttons {
+.actions {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
 }
 
-.sidebar-buttons button {
-    background-color: #FF4500;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-/* Display Section */
 .display {
     flex-grow: 1;
     background-color: #444;
     padding: 60px;
     border-radius: 4px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     position: relative;
 }
 
-.bottom-center {
+.display-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
 }
 
-.bottom-center button {
+/* Buttons */
+button {
     background-color: #FF4500;
     color: white;
     border: none;
@@ -119,15 +120,9 @@ main {
     cursor: pointer;
 }
 
-/* Footer */
 footer {
-    background-color: #000;
-    padding: 10px 20px;
+    margin-top: auto;
     text-align: center;
-}
-
-footer p {
-    margin-top: 10px;
+    padding: 10px;
     font-size: 14px;
 }
-
