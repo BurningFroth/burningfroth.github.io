@@ -1,49 +1,41 @@
  </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <div class="logo">BurningFroth</div>
-        <ul class="menu">
-            <li>
-                Leaderboards
-                <ul class="submenu">
-                    <li><a href="#">Burn Milestones</a></li>
-                    <li><a href="#">Liquidity Milestones</a></li>
-                    <li><a href="#">Profile & Power</a></li>
-                    <li><a href="#">Social Milestones</a></li>
-                    <li><a href="#">Engagement Milestones</a></li>
-                </ul>
-            </li>
-            <li>
-                Milestone Categories
-                <ul class="submenu">
-                    <li><a href="#">Starter NFT Mint Milestones</a></li>
-                    <li><a href="#">High-Spending Mint Milestones</a></li>
-                    <li><a href="#">Trading Volume Milestones</a></li>
-                    <li><a href="#">Secondary Sales Milestones</a></li>
-                    <li><a href="#">Direct Burn Page Milestones</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">NFT Marketplace</a></li>
-        </ul>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo">
+            <img src="text-logo.png" alt="BurningFroth">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Leaderboards</a></li>
+                <li><a href="#">Milestone Categories</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">NFT Marketplace</a></li>
+            </ul>
+        </nav>
     </header>
 
+    <!-- Main Content -->
     <main>
-        <div class="display">
+        <div class="welcome">
             <h1>Welcome to BurningFroth</h1>
             <p>Explore the future of Froth-burning milestones and leaderboards!</p>
-            <div class="actions">
-                <button>Buy Froth</button>
-                <button>Mint</button>
-                <button>Burn Froth</button>
-            </div>
-            <button class="claim-tally">Claim Tally</button>
         </div>
     </main>
 
+    <!-- Buttons Section -->
+    <div class="bottom-buttons">
+        <button>Buy Froth</button>
+        <button>Mint</button>
+        <button>Burn Froth</button>
+        <button>Claim Tally</button>
+    </div>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 BurningFroth. All rights reserved.</p>
+        <p>© 2025 BurningFroth. All rights reserved.</p>
     </footer>
 </body>
 </html>
