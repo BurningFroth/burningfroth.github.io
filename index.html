@@ -7,28 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header Section -->
+    <!-- Header Navigation -->
     <header>
-        <nav class="top-nav">
-            <div class="logo">BurningFroth</div>
-            <ul class="nav-links">
+        <div class="top-nav">
+            <span class="logo">BurningFroth</span>
+            <ul>
+                <!-- Leaderboards -->
                 <li class="dropdown">
                     <a href="#">Leaderboards</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">🔥 Burn Milestones</a></li>
-                        <li><a href="#">💧 Liquidity Milestones</a></li>
-                        <li><a href="#">🎨 Starter NFT Mint Milestones</a></li>
-                        <li><a href="#">💎 High-Spending Mint Milestones</a></li>
-                        <li><a href="#">🔒 Profile Froth Lock Milestones</a></li>
-                        <li><a href="#">💰 Profile Liquidity Points Lock Milestones</a></li>
-                        <li><a href="#">⚡ NFT Power-Up Milestones</a></li>
-                        <li><a href="#">📊 Trading Volume & Secondary Sales</a></li>
-                        <li><a href="#">✅ Collection Completeness Milestones</a></li>
-                        <li><a href="#">👤 Main Profile</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Milestone Categories</a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Burn Milestones</a></li>
                         <li><a href="#">Liquidity Milestones</a></li>
@@ -37,68 +23,78 @@
                         <li><a href="#">Profile Froth Lock Milestones</a></li>
                         <li><a href="#">Profile Liquidity Points Lock Milestones</a></li>
                         <li><a href="#">NFT Power-Up Milestones</a></li>
+                        <li><a href="#">Trading Volume & Secondary Sales</a></li>
+                        <li><a href="#">Collection Completeness Milestones</a></li>
+                        <li><a href="#">Main Profile</a></li>
+                    </ul>
+                </li>
+
+                <!-- Milestone Categories -->
+                <li class="dropdown">
+                    <a href="#">Milestone Categories</a>
+                    <ul class="dropdown-menu">
+                        <li><strong>Core Milestones</strong></li>
+                        <li><a href="#">Burn Milestones</a></li>
+                        <li><a href="#">Liquidity Milestones</a></li>
+                        <li><a href="#">Starter NFT Mint Milestones</a></li>
+                        <li><a href="#">High-Spending Mint Milestones</a></li>
+                        <li><strong>Profile & Power</strong></li>
+                        <li><a href="#">Profile Froth Lock Milestones</a></li>
+                        <li><a href="#">Profile Liquidity Points Lock Milestones</a></li>
+                        <li><a href="#">NFT Power-Up Milestones</a></li>
+                        <li><strong>Social Milestones</strong></li>
+                        <li><a href="#">Profile Likes Milestones</a></li>
+                        <li><a href="#">NFT Likes Milestones</a></li>
+                        <li><a href="#">Individual NFT Likes Milestones</a></li>
+                        <li><a href="#">Likes Given Milestones</a></li>
+                        <li><strong>Engagement Milestones</strong></li>
                         <li><a href="#">Trading Volume Milestones</a></li>
                         <li><a href="#">Secondary Sales Milestones</a></li>
                         <li><a href="#">Direct Burn Page Milestones</a></li>
-                        <li><a href="#">Profile Likes Milestone</a></li>
-                        <li><a href="#">NFT Likes Milestone</a></li>
-                        <li><a href="#">Individual NFT Likes Milestone</a></li>
-                        <li><a href="#">Likes Given Milestone</a></li>
-                        <li><a href="#">Collection Completeness Milestones</a></li>
                         <li><a href="#">Referral-Based Milestones</a></li>
                         <li><a href="#">Leaderboard Rank Milestones</a></li>
                         <li><a href="#">Profile Engagement Milestones</a></li>
                     </ul>
                 </li>
+
+                <!-- Profile -->
                 <li><a href="#">Profile</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
 
-    <!-- Main Layout -->
+    <!-- Main Content -->
     <main>
-        <!-- Sidebar Left -->
-        <aside class="sidebar-left">
-            <section class="live-prices">
-                <h3>Live Prices</h3>
-                <p>Froth: $0.XX</p>
-                <p>Liquidity Token: $0.XX</p>
-                <p>Burn Token: $0.XX</p>
-            </section>
-            <section class="community-feed">
-                <h3>Community Feed</h3>
-                <p>Latest burns and milestones here...</p>
-            </section>
-        </aside>
-
-        <!-- Display Page -->
-        <section class="display-page">
+        <div class="sidebar-left">
+            <h3>Live Prices</h3>
+            <p>Froth: $0.XX</p>
+            <p>Liquidity Token: $0.XX</p>
+            <p>Burn Token: $0.XX</p>
+            <h3>Community Feed</h3>
+            <p>Latest burns and milestones here...</p>
+        </div>
+        <div class="display-page">
             <h1>Welcome to BurningFroth</h1>
             <p>Explore the future of Froth-burning milestones and leaderboards!</p>
-        </section>
-
-        <!-- Sidebar Right -->
-        <aside class="sidebar-right">
-            <section class="tally-trade">
-                <h3>Tally Trade</h3>
-                <button>Claim Tally</button>
-            </section>
-            <section class="dex">
-                <h3>DEX</h3>
-                <button>Open DEX</button>
-            </section>
-        </aside>
+        </div>
+        <div class="sidebar-right">
+            <h3>Tally Trade</h3>
+            <button>Claim Tally</button>
+            <h3>DEX</h3>
+            <button>Open DEX</button>
+        </div>
     </main>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer>
         <div class="footer-nav">
             <button>Buy Froth</button>
-            <button class="mint-btn">Mint</button>
+            <button>Mint</button>
             <button>Burn Froth</button>
         </div>
-        <p>&copy; 2025 BurningFroth. All rights reserved.</p>
+        <p>© 2025 BurningFroth. All rights reserved.</p>
     </footer>
 </body>
 </html>
+
 
