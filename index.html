@@ -1,119 +1,65 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BurningFroth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">BurningFroth</div>
+        <nav>
+            <ul class="menu">
+                <li>Leaderboards
+                    <ul class="submenu">
+                        <li><a href="#">Burn Milestones</a></li>
+                        <li><a href="#">Liquidity Milestones</a></li>
+                        <li><a href="#">Profile & Power</a></li>
+                        <li><a href="#">Social Milestones</a></li>
+                        <li><a href="#">Engagement Milestones</a></li>
+                    </ul>
+                </li>
+                <li>Milestone Categories
+                    <ul class="submenu">
+                        <li><a href="#">Starter NFT Mint Milestones</a></li>
+                        <li><a href="#">High-Spending Mint Milestones</a></li>
+                        <li><a href="#">Trading Volume Milestones</a></li>
+                        <li><a href="#">Secondary Sales Milestones</a></li>
+                        <li><a href="#">Direct Burn Page Milestones</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #111;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+    <main>
+        <aside class="sidebar">
+            <h2>Live Prices</h2>
+            <p>Froth: $0.XX</p>
+            <p>Liquidity Token: $0.XX</p>
+            <p>Burn Token: $0.XX</p>
+            <h2>Community Feed</h2>
+            <p>Latest burns and milestones here...</p>
+        </aside>
+        <section class="display">
+            <h1>Welcome to BurningFroth</h1>
+            <p>Explore the future of Froth-burning milestones and leaderboards!</p>
+        </section>
+        <aside class="bottom-left">
+            <button>Claim Tally</button>
+            <button>Open DEX</button>
+        </aside>
+    </main>
 
-/* Header */
-header {
-    background-color: #FF4500;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    <footer>
+        <button>Buy Froth</button>
+        <button>Mint</button>
+        <button>Burn Froth</button>
+        <p>© 2025 BurningFroth. All rights reserved.</p>
+    </footer>
+</body>
+</html>
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.menu > li {
-    position: relative;
-}
-
-.submenu {
-    display: none;
-    position: absolute;
-    background-color: #222;
-    padding: 10px;
-    border-radius: 4px;
-    list-style: none;
-    top: 100%;
-    left: 0;
-}
-
-.menu > li:hover .submenu {
-    display: block;
-}
-
-.submenu > li {
-    margin: 5px 0;
-}
-
-.submenu a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Main */
-main {
-    display: flex;
-    flex-grow: 1;
-    padding: 20px;
-    gap: 20px;
-}
-
-.sidebar {
-    width: 20%;
-    background-color: #333;
-    padding: 20px;
-    border-radius: 4px;
-}
-
-.display {
-    flex-grow: 1;
-    background-color: #444;
-    padding: 60px;
-    border-radius: 4px;
-    text-align: center;
-}
-
-/* Bottom Left Buttons */
-.bottom-left {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-/* Footer */
-footer {
-    background-color: #000;
-    padding: 20px;
-    text-align: center;
-}
-
-footer button {
-    background-color: #FF4500;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-footer p {
-    margin-top: 10px;
-    font-size: 14px;
-}
 
