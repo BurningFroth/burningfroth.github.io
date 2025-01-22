@@ -1,87 +1,127 @@
-/* General Styling */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Fredoka One', sans-serif;
     background-color: #111;
     color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Header */
 header {
     background: linear-gradient(90deg, #FF4500, #FFBB33);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
+/* Logo Styling */
 .logo-container img {
-    height: 60px;
+    height: 70px;
+    margin-right: 20px;
 }
 
-.nav-link {
-    color: white;
-    font-family: 'Playfair Display', serif;
+/* Navigation Styling */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
     font-size: 1.2rem;
-    font-weight: 700;
-    transition: color 0.3s ease;
+    font-weight: bold;
 }
 
-.nav-link:hover {
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
     color: #FFD700;
 }
 
-/* Profile and Notification */
+/* Profile and Notification Bell */
 .profile-notifications {
     display: flex;
     align-items: center;
     gap: 10px;
-    background-color: #FF4500;
-    padding: 5px 15px;
+    padding: 10px 15px;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 25px;
 }
 
 .profile-details span {
     font-size: 0.9rem;
-    font-weight: 500;
+    color: white;
 }
 
 .notification-bell img {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.notification-bell img:hover {
+    transform: scale(1.1);
+}
+
+/* Main Section */
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.welcome h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    font-size: 1.2rem;
 }
 
 /* Buttons Section */
-.bottom-buttons .btn {
-    font-size: 1.1rem;
+.bottom-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.bottom-buttons button {
+    background: linear-gradient(90deg, #FF6A00, #FF4500);
+    color: white;
+    border: none;
+    border-radius: 10px;
     padding: 10px 20px;
-    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.bottom-buttons button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #FF4500, #FF6A00);
 }
 
 /* Footer */
 footer {
     background-color: #222;
+    text-align: center;
+    padding: 10px;
     color: #aaa;
     font-size: 0.9rem;
-}
-
-/* Media Queries */
-@media (max-width: 1200px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul {
-        gap: 15px;
-    }
-}
-
-@media (max-width: 768px) {
-    .menu {
-        display: none;
-    }
-
-    .profile-details {
-        display: none;
-    }
-
-    .bottom-buttons .btn {
-        font-size: 1rem;
-    }
 }
