@@ -1,105 +1,87 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General Styling */
 body {
-    font-family: 'Fredoka One', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #111;
     color: white;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
 /* Header */
 header {
     background: linear-gradient(90deg, #FF4500, #FFBB33);
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/* Adjusting Logo Container */
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 15px; /* Adds space between the logo and text */
 }
 
 .logo-container img {
-    height: 60px; /* Adjust height as needed */
-    max-width: 100%; /* Ensure it scales properly */
-    object-fit: contain; /* Ensures the image fits within its bounds */
+    height: 60px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav ul li a {
+.nav-link {
     color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+.nav-link:hover {
     color: #FFD700;
 }
 
-/* Main Section */
-main {
-    flex-grow: 1;
+/* Profile and Notification */
+.profile-notifications {
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
+    gap: 10px;
+    background-color: #FF4500;
+    padding: 5px 15px;
+    border-radius: 25px;
 }
 
-.welcome h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+.profile-details span {
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
-.welcome p {
-    font-size: 1.2rem;
+.notification-bell img {
+    width: 24px;
+    height: 24px;
 }
 
 /* Buttons Section */
-.bottom-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.bottom-buttons button {
-    background: linear-gradient(90deg, #FF6A00, #FF4500);
-    color: white;
-    border: none;
-    border-radius: 10px;
+.bottom-buttons .btn {
+    font-size: 1.1rem;
     padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: transform 0.2s, background 0.3s;
-}
-
-.bottom-buttons button:hover {
-    transform: scale(1.1);
-    background: linear-gradient(90deg, #FF4500, #FF6A00);
+    border-radius: 5px;
 }
 
 /* Footer */
 footer {
     background-color: #222;
-    text-align: center;
-    padding: 10px;
     color: #aaa;
     font-size: 0.9rem;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .profile-details {
+        display: none;
+    }
+
+    .bottom-buttons .btn {
+        font-size: 1rem;
+    }
 }
