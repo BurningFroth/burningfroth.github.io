@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BurningFroth</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <style>
         /* General Reset */
         * {
@@ -34,11 +35,10 @@
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 10px;
         }
 
         .logo-container img {
-            height: 60px;
+            height: 50px;
             object-fit: contain;
         }
 
@@ -59,46 +59,42 @@
             color: #FFD700;
         }
 
-        /* Main Section */
-        main {
-            flex-grow: 1;
+        .notification-bell {
             display: flex;
-            justify-content: center;
             align-items: center;
-            text-align: center;
-        }
-
-        .welcome h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .welcome p {
-            font-size: 1.2rem;
-        }
-
-        /* Buttons Section */
-        .bottom-buttons {
-            display: flex;
             justify-content: center;
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .bottom-buttons button {
-            background: linear-gradient(90deg, #FF6A00, #FF4500);
-            color: white;
-            border: none;
-            border-radius: 10px;
-            padding: 10px 20px;
-            font-size: 1rem;
+            background-color: #FF4500;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
             cursor: pointer;
-            transition: transform 0.2s, background 0.3s;
+            position: relative;
+            transition: transform 0.3s ease;
         }
 
-        .bottom-buttons button:hover {
+        .notification-bell:hover {
             transform: scale(1.1);
-            background: linear-gradient(90deg, #FF4500, #FF6A00);
+        }
+
+        .notification-bell::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: #FFD700;
+            border-radius: 50%;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            display: none; /* Make this display: block when there’s a notification */
+        }
+
+        .notification-bell.has-notifications::after {
+            display: block;
+        }
+
+        .notification-bell img {
+            width: 24px;
+            height: 24px;
         }
 
         /* Footer */
@@ -109,14 +105,14 @@
             color: #aaa;
             font-size: 0.9rem;
         }
+
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="logo-container">
-            <img src="BeFunky-design logo writing logo.png" alt="Logo">
-            <img src="BeFunky-design logo writing.png" alt="BurningFroth">
+            <img src="BeFunky-design logo writing.png" alt="BurningFroth Logo">
         </div>
         <nav>
             <ul class="menu">
@@ -126,6 +122,9 @@
                 <li><a href="#">NFT Marketplace</a></li>
             </ul>
         </nav>
+        <div class="notification-bell" onclick="showNotifications()">
+            <img src="bell-icon.png" alt="Notifications">
+        </div>
     </header>
 
     <!-- Main Content -->
@@ -136,18 +135,16 @@
         </div>
     </main>
 
-    <!-- Buttons Section -->
-    <div class="bottom-buttons">
-        <button>Buy Froth</button>
-        <button>Mint</button>
-        <button>Burn Froth</button>
-        <button>Claim Tally</button>
-    </div>
-
     <!-- Footer -->
     <footer>
         <p>© 2025 BurningFroth. All rights reserved.</p>
     </footer>
+
+    <script>
+        function showNotifications() {
+            alert('No new notifications!');
+        }
+    </script>
 </body>
 </html>
 
