@@ -32,14 +32,8 @@
             justify-content: space-between;
         }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
-
         .logo-container img {
             height: 50px;
-            object-fit: contain;
         }
 
         nav ul {
@@ -59,42 +53,59 @@
             color: #FFD700;
         }
 
+        /* Profile and Notification Section */
+        .profile-notifications {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #FF4500;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        .profile-notifications img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .profile-details {
+            color: white;
+            font-size: 0.9rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .profile-details span {
+            font-weight: bold;
+        }
+
         .notification-bell {
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #FF4500;
+            background-color: #FFD700;
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             cursor: pointer;
             position: relative;
-            transition: transform 0.3s ease;
-        }
-
-        .notification-bell:hover {
-            transform: scale(1.1);
         }
 
         .notification-bell::after {
             content: '';
-            width: 10px;
-            height: 10px;
-            background-color: #FFD700;
+            width: 8px;
+            height: 8px;
+            background-color: red;
             border-radius: 50%;
             position: absolute;
             top: 5px;
             right: 5px;
-            display: none; /* Make this display: block when there’s a notification */
+            display: none; /* Set to display: block when there are notifications */
         }
 
         .notification-bell.has-notifications::after {
             display: block;
-        }
-
-        .notification-bell img {
-            width: 24px;
-            height: 24px;
         }
 
         /* Footer */
@@ -105,7 +116,6 @@
             color: #aaa;
             font-size: 0.9rem;
         }
-
     </style>
 </head>
 <body>
@@ -118,12 +128,18 @@
             <ul class="menu">
                 <li><a href="#">Leaderboards</a></li>
                 <li><a href="#">Milestone Categories</a></li>
-                <li><a href="#">Profile</a></li>
                 <li><a href="#">NFT Marketplace</a></li>
             </ul>
         </nav>
-        <div class="notification-bell" onclick="showNotifications()">
-            <img src="bell-icon.png" alt="Notifications">
+        <div class="profile-notifications">
+            <div class="profile-details">
+                <span>Locked Froth: 100</span>
+                <span>Burn Tokens: 50</span>
+                <span>Liquidity Tokens: 30</span>
+            </div>
+            <div class="notification-bell" onclick="showNotifications()">
+                <img src="bell-icon.png" alt="Notifications">
+            </div>
         </div>
     </header>
 
@@ -147,4 +163,3 @@
     </script>
 </body>
 </html>
-
