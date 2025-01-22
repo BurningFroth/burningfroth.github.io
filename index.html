@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BurningFroth</title>
     <!-- Adding Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
         /* General Reset */
@@ -27,53 +27,55 @@
         /* Header */
         header {
             background: linear-gradient(90deg, #FF4500, #FFBB33);
-            padding: 10px 20px;
+            padding: 20px 30px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            height: 100px; /* Increased header height */
         }
 
         .logo-container img {
-            height: 50px;
+            height: 60px; /* Adjusted logo size */
         }
 
         /* Navigation Menu */
         nav ul {
             list-style: none;
             display: flex;
-            gap: 20px;
+            gap: 30px;
         }
 
         nav ul li a {
             font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
+            font-size: 1.5rem; /* Increased font size */
             color: white;
             text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
+            font-weight: 700; /* Bolder font weight */
+            transition: color 0.3s, transform 0.2s;
         }
 
         nav ul li a:hover {
             color: #FFD700;
+            transform: scale(1.1); /* Slight scaling effect on hover */
         }
 
         /* Profile and Notification Section */
         .profile-notifications {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
             background-color: #FF4500;
-            padding: 5px 15px;
-            border-radius: 20px;
+            padding: 10px 20px;
+            border-radius: 25px;
         }
 
         .profile-details {
             font-family: 'Roboto', sans-serif;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             color: white;
             display: flex;
             flex-direction: column;
-            gap: 2px;
+            gap: 3px;
         }
 
         .profile-details span {
@@ -86,15 +88,15 @@
             justify-content: center;
             background-color: #FFD700;
             border-radius: 50%;
-            width: 30px;
-            height: 30px;
+            width: 35px;
+            height: 35px;
             cursor: pointer;
             position: relative;
         }
 
         .notification-bell img {
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
         }
 
         .notification-bell::after {
