@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BurningFroth</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <!-- Adding Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
         /* General Reset */
@@ -15,7 +16,7 @@
         }
 
         body {
-            font-family: 'Fredoka One', sans-serif;
+            font-family: 'Roboto', sans-serif;
             background-color: #111;
             color: white;
             display: flex;
@@ -36,6 +37,7 @@
             height: 50px;
         }
 
+        /* Navigation Menu */
         nav ul {
             list-style: none;
             display: flex;
@@ -43,9 +45,11 @@
         }
 
         nav ul li a {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
             color: white;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
             transition: color 0.3s;
         }
 
@@ -63,21 +67,17 @@
             border-radius: 20px;
         }
 
-        .profile-notifications img {
-            width: 24px;
-            height: 24px;
-        }
-
         .profile-details {
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.8rem;
             color: white;
-            font-size: 0.9rem;
             display: flex;
             flex-direction: column;
             gap: 2px;
         }
 
         .profile-details span {
-            font-weight: bold;
+            font-weight: 500;
         }
 
         .notification-bell {
@@ -90,6 +90,11 @@
             height: 30px;
             cursor: pointer;
             position: relative;
+        }
+
+        .notification-bell img {
+            width: 18px;
+            height: 18px;
         }
 
         .notification-bell::after {
