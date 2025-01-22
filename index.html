@@ -4,169 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BurningFroth</title>
-    <!-- Adding Google Fonts -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #111;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(90deg, #FF4500, #FFBB33);
-            padding: 20px 30px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 100px; /* Increased header height */
-        }
-
-        .logo-container img {
-            height: 60px; /* Adjusted logo size */
-        }
-
-        /* Navigation Menu */
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-        }
-
-        nav ul li a {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem; /* Increased font size */
-            color: white;
-            text-decoration: none;
-            font-weight: 700; /* Bolder font weight */
-            transition: color 0.3s, transform 0.2s;
-        }
-
-        nav ul li a:hover {
-            color: #FFD700;
-            transform: scale(1.1); /* Slight scaling effect on hover */
-        }
-
-        /* Profile and Notification Section */
-        .profile-notifications {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            background-color: #FF4500;
-            padding: 10px 20px;
-            border-radius: 25px;
-        }
-
-        .profile-details {
-            font-family: 'Roboto', sans-serif;
-            font-size: 0.9rem;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            gap: 3px;
-        }
-
-        .profile-details span {
-            font-weight: 500;
-        }
-
-        .notification-bell {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #FFD700;
-            border-radius: 50%;
-            width: 35px;
-            height: 35px;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .notification-bell img {
-            width: 20px;
-            height: 20px;
-        }
-
-        .notification-bell::after {
-            content: '';
-            width: 8px;
-            height: 8px;
-            background-color: red;
-            border-radius: 50%;
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            display: none; /* Set to display: block when there are notifications */
-        }
-
-        .notification-bell.has-notifications::after {
-            display: block;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #222;
-            text-align: center;
-            padding: 10px;
-            color: #aaa;
-            font-size: 0.9rem;
-        }
-    </style>
 </head>
 <body>
     <!-- Header -->
-    <header>
+    <header class="bg-gradient p-3 d-flex align-items-center justify-content-between">
         <div class="logo-container">
-            <img src="BeFunky-design logo writing.png" alt="BurningFroth Logo">
+            <img src="BeFunky-design logo writing.png" alt="BurningFroth Logo" class="img-fluid">
         </div>
-        <nav>
-            <ul class="menu">
-                <li><a href="#">Leaderboards</a></li>
-                <li><a href="#">Milestone Categories</a></li>
-                <li><a href="#">NFT Marketplace</a></li>
+        <nav class="d-none d-lg-block">
+            <ul class="menu list-inline mb-0">
+                <li class="list-inline-item"><a href="#" class="nav-link">Leaderboards</a></li>
+                <li class="list-inline-item"><a href="#" class="nav-link">Milestone Categories</a></li>
+                <li class="list-inline-item"><a href="#" class="nav-link">NFT Marketplace</a></li>
             </ul>
         </nav>
+        <button class="btn btn-sm btn-light d-lg-none" onclick="toggleMenu()">☰</button>
         <div class="profile-notifications">
-            <div class="profile-details">
+            <div class="profile-details d-none d-lg-flex flex-column text-end">
                 <span>Locked Froth: 100</span>
                 <span>Burn Tokens: 50</span>
                 <span>Liquidity Tokens: 30</span>
             </div>
-            <div class="notification-bell" onclick="showNotifications()">
+            <div class="notification-bell">
                 <img src="bell-icon.png" alt="Notifications">
             </div>
         </div>
     </header>
 
+    <!-- Mobile Navigation -->
+    <nav id="mobileMenu" class="d-lg-none d-none bg-dark text-white p-3">
+        <ul class="menu list-unstyled">
+            <li><a href="#" class="nav-link text-white">Leaderboards</a></li>
+            <li><a href="#" class="nav-link text-white">Milestone Categories</a></li>
+            <li><a href="#" class="nav-link text-white">NFT Marketplace</a></li>
+        </ul>
+    </nav>
+
     <!-- Main Content -->
-    <main>
+    <main class="container text-center my-5">
         <div class="welcome">
-            <h1>Welcome to BurningFroth</h1>
-            <p>Explore the future of Froth-burning milestones and leaderboards!</p>
+            <h1 class="display-4">Welcome to BurningFroth</h1>
+            <p class="lead">Explore the future of Froth-burning milestones and leaderboards!</p>
         </div>
     </main>
 
+    <!-- Buttons Section -->
+    <div class="bottom-buttons container-fluid d-flex justify-content-center gap-3 p-3">
+        <button class="btn btn-warning">Buy Froth</button>
+        <button class="btn btn-success">Mint</button>
+        <button class="btn btn-danger">Burn Froth</button>
+        <button class="btn btn-primary">Claim Tally</button>
+    </div>
+
     <!-- Footer -->
-    <footer>
+    <footer class="bg-dark text-center text-white py-3">
         <p>© 2025 BurningFroth. All rights reserved.</p>
     </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <script>
-        function showNotifications() {
-            alert('No new notifications!');
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('d-none');
         }
     </script>
 </body>
 </html>
+
