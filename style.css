@@ -25,7 +25,18 @@ header {
 }
 
 /* Logo Styling */
-.logo-container span {
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container img {
+    height: 50px;
+    max-width: 100%;
+}
+
+.header-title {
     font-size: 1.5rem;
     font-weight: bold;
     color: white;
@@ -158,27 +169,24 @@ footer {
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    nav ul {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        background-color: #333;
-        padding: 10px;
-        border-radius: 8px;
-    }
-
-    nav ul.show {
-        display: flex;
+    .logo-container {
+        display: none; /* Hide logo on mobile */
     }
 
     .profile-box {
         align-self: flex-end;
         width: 100%;
         max-width: 250px;
+    }
+
+    .profile-details {
+        font-size: 0.8rem;
+        gap: 2px; /* Compact text in mobile */
     }
 
     .profile-box .hamburger-menu {
