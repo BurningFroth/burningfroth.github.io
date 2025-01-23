@@ -31,14 +31,65 @@ header {
     color: white;
 }
 
+/* Profile Box */
+.profile-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: white;
+    position: relative; /* To position the hamburger in the top-right */
+    max-width: 300px;
+}
+
+/* Adjust the text layout inside the profile box */
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+    gap: 5px;
+    width: 100%; /* Ensure it spans the full box width */
+}
+
+.profile-box .hamburger-menu {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.profile-box .hamburger-menu span {
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
 /* Navigation Styling */
 nav ul {
     list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0;
-    font-size: 1.2rem;
-    font-weight: bold;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    gap: 10px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+}
+
+nav ul.show {
+    display: flex; /* Show menu when hamburger toggled */
 }
 
 nav ul li a {
@@ -49,20 +100,6 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #FFD700;
-}
-
-/* Profile Box */
-.profile-box {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align text to the left inside the box */
-    justify-content: center;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    font-size: 0.9rem;
-    color: white;
-    max-width: 200px;
 }
 
 /* Main Section */
@@ -139,26 +176,14 @@ footer {
     }
 
     .profile-box {
-        align-self: flex-end; /* Keep the box on the right side of the header */
-        text-align: left; /* Ensure text aligns to the left within the box */
-        padding: 10px;
-        font-size: 0.8rem;
-        max-width: 200px;
-    }
-
-    .hamburger-menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 25px;
-        width: 30px;
-        cursor: pointer;
-    }
-
-    .hamburger-menu span {
-        background-color: white;
-        height: 3px;
+        align-self: flex-end;
         width: 100%;
-        border-radius: 2px;
+        max-width: 250px;
+    }
+
+    .profile-box .hamburger-menu {
+        position: absolute;
+        top: 5px;
+        right: 5px;
     }
 }
