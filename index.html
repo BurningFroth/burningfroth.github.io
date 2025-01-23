@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BurningFroth</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,28 +14,32 @@
             <span>BurningFroth</span>
         </div>
 
-        <!-- Hamburger Menu for Mobile -->
-        <div class="hamburger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <nav>
-            <ul class="menu">
-                <li><a href="#">Leaderboards</a></li>
-                <li><a href="#">Milestones</a></li>
-                <li><a href="#">Marketplace</a></li>
-            </ul>
-        </nav>
-
         <div class="profile-box">
-            <span>Flow: 120</span>
-            <span>Froth: 250</span>
-            <span>Burn Token: 75</span>
-            <span>Liquidity Token: 40</span>
+            <!-- Profile Text -->
+            <div class="profile-details">
+                <span>Flow: 120</span>
+                <span>Froth: 250</span>
+                <span>Burn Token: 75</span>
+                <span>Liquidity Token: 40</span>
+            </div>
+
+            <!-- Hamburger Menu for Navigation -->
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Leaderboards</a></li>
+            <li><a href="#">Milestones</a></li>
+            <li><a href="#">Marketplace</a></li>
+        </ul>
+    </nav>
 
     <!-- Main Content -->
     <main>
@@ -58,15 +62,16 @@
         <p>© 2025 BurningFroth. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript for Hamburger Menu -->
+    <!-- Add JavaScript for Hamburger Menu -->
     <script>
+        // Select the hamburger menu and navigation menu
         const hamburgerMenu = document.querySelector('.hamburger-menu');
         const navMenu = document.querySelector('nav ul');
 
+        // Add an event listener to toggle the "show" class
         hamburgerMenu.addEventListener('click', () => {
             navMenu.classList.toggle('show');
         });
     </script>
 </body>
 </html>
-
