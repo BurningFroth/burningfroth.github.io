@@ -214,4 +214,44 @@ footer {
         font-size: 1.2rem;
     }
 }
+/* Hamburger Menu Styling */
+.hamburger-menu {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Show Hamburger Menu on Smaller Screens */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    nav ul {
+        display: none; /* Hide navigation links initially */
+        flex-direction: column;
+        gap: 10px;
+        background-color: #333;
+        padding: 10px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        border-radius: 8px;
+    }
+
+    nav ul.show {
+        display: flex; /* Show when hamburger is toggled */
+    }
+}
 
