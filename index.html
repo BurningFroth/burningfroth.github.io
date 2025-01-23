@@ -4,69 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BurningFroth</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Header -->
-   <header>
-    <div class="logo-container">
-        <img src="BeFunky-design logo writing.png" alt="BurningFroth Logo">
-    </div>
-
-    <!-- Hamburger Menu for Mobile -->
-    <div class="hamburger-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
-    <nav>
-        <ul class="menu">
-            <li><a href="#">Leaderboards</a></li>
-            <li><a href="#">Milestone Categories</a></li>
-            <li><a href="#">NFT Marketplace</a></li>
-        </ul>
-    </nav>
-
-    <div class="profile-notifications">
-        <div class="profile-details">
-            <span>Locked Froth: 100</span>
-            <span>Burn Tokens: 50</span>
-            <span>Liquidity Tokens: 30</span>
+    <header>
+        <div class="logo-container">
+            <img src="BeFunky-design logo writing.png" alt="BurningFroth Logo">
         </div>
-        <div class="notification-bell">
-            <img src="bell-icon.png" alt="Notifications">
+
+        <!-- Hamburger Menu for Mobile -->
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </div>
-</header>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Leaderboards</a></li>
+                <li><a href="#">Milestone Categories</a></li>
+                <li><a href="#">NFT Marketplace</a></li>
+            </ul>
+        </nav>
+
+        <!-- Profile Section -->
+        <div class="profile-notifications">
+            <div class="profile-details">
+                <span>Locked Froth: 100</span>
+                <span>Burn Tokens: 50</span>
+                <span>Liquidity Tokens: 30</span>
+            </div>
+            <div class="notification-bell">
+                <img src="bell-icon.png" alt="Notifications">
+            </div>
+        </div>
+    </header>
     
     <!-- Main Content -->
-   </main>
+    <main>
+        <div class="welcome">
+            <h1>Welcome to BurningFroth</h1>
+            <p>Explore the future of Froth-burning milestones and leaderboards!</p>
+        </div>
+    </main>
 
-<!-- Buttons Section -->
-<div class="bottom-buttons">
-    <button>Buy Froth</button>
-    <button>Mint</button>
-    <button>Burn Froth</button>
-    <button>Claim Tally</button>
-</div>
+    <!-- Buttons Section -->
+    <div class="bottom-buttons">
+        <button>Buy Froth</button>
+        <button>Mint</button>
+        <button>Burn Froth</button>
+        <button>Claim Tally</button>
+    </div>
 
-<!-- Footer -->
-<footer>
-    <p>© 2025 BurningFroth. All rights reserved.</p>
-</footer>
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 BurningFroth. All rights reserved.</p>
+    </footer>
 
-<!-- Add the JavaScript for Hamburger Menu -->
-<script>
-    // Select the hamburger menu and navigation menu
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    const navMenu = document.querySelector('nav ul');
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const navMenu = document.querySelector('nav ul');
 
-    // Add an event listener to toggle the "show" class
-    hamburgerMenu.addEventListener('click', () => {
-        navMenu.classList.toggle('show');
-    });
-</script>
+        hamburgerMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
