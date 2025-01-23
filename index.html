@@ -42,24 +42,31 @@
 </header>
     
     <!-- Main Content -->
-    <main>
-        <div class="welcome">
-            <h1>Welcome to BurningFroth</h1>
-            <p>Explore the future of Froth-burning milestones and leaderboards!</p>
-        </div>
-    </main>
+   </main>
 
-    <!-- Buttons Section -->
-    <div class="bottom-buttons">
-        <button>Buy Froth</button>
-        <button>Mint</button>
-        <button>Burn Froth</button>
-        <button>Claim Tally</button>
-    </div>
+<!-- Buttons Section -->
+<div class="bottom-buttons">
+    <button>Buy Froth</button>
+    <button>Mint</button>
+    <button>Burn Froth</button>
+    <button>Claim Tally</button>
+</div>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 BurningFroth. All rights reserved.</p>
-    </footer>
+<!-- Footer -->
+<footer>
+    <p>© 2025 BurningFroth. All rights reserved.</p>
+</footer>
+
+<!-- Add the JavaScript for Hamburger Menu -->
+<script>
+    // Select the hamburger menu and navigation menu
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navMenu = document.querySelector('nav ul');
+
+    // Add an event listener to toggle the "show" class
+    hamburgerMenu.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+    });
+</script>
 </body>
 </html>
