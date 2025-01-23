@@ -44,7 +44,7 @@ nav ul li a:hover {
     color: #FFD700;
 }
 
-/* Profile and Notification Bell */
+/* Profile Section */
 .profile-notifications {
     display: flex;
     align-items: center;
@@ -58,16 +58,6 @@ nav ul li a:hover {
 /.profile-details span {
     font-size: 0.9rem;
     color: white;
-}
-
-.notification-bell span {
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.notification-bell span:hover {
-    transform: scale(1.1);
 }
 
 /* Main Section */
@@ -125,7 +115,9 @@ footer {
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
         padding: 15px;
     }
 
