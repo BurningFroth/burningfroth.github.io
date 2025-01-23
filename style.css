@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Fredoka One', sans-serif;
     background-color: #111;
     color: white;
     display: flex;
@@ -25,9 +25,10 @@ header {
 }
 
 /* Logo Styling */
-.logo-container img {
-    height: 70px;
-    max-width: 100%;
+.logo-container span {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
 }
 
 /* Navigation Styling */
@@ -35,7 +36,7 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 30px;
-    margin: 0 auto; /* Center the navigation menu */
+    margin: 0;
     font-size: 1.2rem;
     font-weight: bold;
 }
@@ -50,32 +51,29 @@ nav ul li a:hover {
     color: #FFD700;
 }
 
-/* Profile Section */
+/* Profile and Notification Bell */
 .profile-notifications {
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 10px 15px;
     background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
     text-align: right;
 }
 
 .profile-details span {
     font-size: 0.9rem;
     color: white;
-    display: block;
 }
 
-.notification-bell img {
-    width: 30px;
-    height: 30px;
+.notification-bell span {
+    font-size: 1.5rem;
     cursor: pointer;
     transition: transform 0.2s;
 }
 
-.notification-bell img:hover {
+.notification-bell span:hover {
     transform: scale(1.1);
 }
 
@@ -129,7 +127,6 @@ footer {
     padding: 10px;
     color: #aaa;
     font-size: 0.9rem;
-    margin-top: auto;
 }
 
 /* Media Queries for Responsiveness */
@@ -145,9 +142,112 @@ footer {
         gap: 15px;
     }
 
+    .logo-container span {
+        font-size: 1.2rem;
+    }
+
     .profile-notifications {
         justify-content: center;
         flex-direction: column;
         gap: 5px;
+    }
+
+    .welcome h1 {
+        font-size: 1.8rem;
+    }
+
+    .welcome p {
+        font-size: 1rem;
+    }
+
+    .bottom-buttons button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    header {
+        padding: 15px;
+    }
+
+    .menu {
+        gap: 20px;
+    }
+
+    .logo-container span {
+        font-size: 1.5rem;
+    }
+
+    .welcome h1 {
+        font-size: 2rem;
+    }
+
+    .bottom-buttons button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    header {
+        padding: 20px 30px;
+    }
+
+    .menu {
+        gap: 30px;
+    }
+
+    .logo-container span {
+        font-size: 1.8rem;
+    }
+
+    .welcome h1 {
+        font-size: 2.5rem;
+    }
+
+    .bottom-buttons button {
+        padding: 12px 25px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Hamburger Menu Styling */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #333;
+        padding: 10px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        border-radius: 8px;
+    }
+
+    nav ul.show {
+        display: flex;
     }
 }
