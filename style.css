@@ -43,48 +43,6 @@ header {
     color: white;
 }
 
-/* Locked Tokens Display */
-.locked-tokens-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 15px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    color: white;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-}
-
-.locked-tokens-box h4 {
-    font-size: 1rem;
-    margin-bottom: 5px;
-}
-
-.token-display {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.token {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-}
-
-.token img {
-    width: 50px;
-    height: 50px;
-}
-
-.operator {
-    font-size: 1.5rem;
-    color: white;
-    font-weight: bold;
-}
-
 /* Profile Box */
 .profile-box {
     display: flex;
@@ -125,6 +83,47 @@ header {
     width: 100%;
     border-radius: 2px;
     transition: all 0.3s ease;
+}
+
+/* Locked Tokens Display */
+.locked-tokens-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.locked-tokens-box h4 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.token-display {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.token {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.token img {
+    width: 50px;
+    height: 50px;
+}
+
+.operator {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
 }
 
 /* Navigation Styling */
@@ -207,4 +206,40 @@ footer {
     color: #aaa;
     font-size: 0.9rem;
     margin-top: auto;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 10px;
+    }
+
+    .logo-container img {
+        height: 40px;
+    }
+
+    .header-title {
+        display: none; /* Hide title on mobile */
+    }
+
+    .profile-box {
+        flex-direction: row;
+        align-items: center;
+        padding: 5px 10px;
+        max-width: 180px;
+    }
+
+    .profile-details {
+        font-size: 0.8rem;
+        gap: 2px;
+    }
+
+    .profile-box .hamburger-menu {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
 }
