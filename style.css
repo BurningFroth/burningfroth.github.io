@@ -1,79 +1,245 @@
+/* General Reset */
+
+- {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #111;
+color: white;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+
+/* Header */
+header {
+background: linear-gradient(90deg, #FF4500, #FFBB33);
+padding: 10px 20px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+
+/* Logo */
+.logo-container img {
+height: 60px;
+max-width: 100%;
+}
+
 /* Locked Tokens Box */
 .locked-tokens-box {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-    color: white;
-    max-width: 350px;
+background-color: rgba(255, 255, 255, 0.1);
+padding: 10px;
+border-radius: 10px;
+text-align: center;
+color: white;
+max-width: 350px;
 }
 
 .locked-tokens-box h4 {
-    margin-bottom: 5px;
-    font-size: 1rem; /* Default size for all displays */
-    font-weight: bold;
-    color: white;
-    border: 2px solid black; /* Added black border */
-    display: inline-block; /* Ensures padding affects just the text */
-    padding: 5px 10px;
-    border-radius: 5px;
+margin-bottom: 5px;
+font-size: 1rem;
+font-weight: bold;
 }
 
 .token-display {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
 }
 
 .token {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 5px;
 }
 
 .token img {
-    height: 40px;
-    width: 40px;
+height: 40px;
+width: 40px;
 }
 
 .token-value {
-    font-size: 0.9rem;
+font-size: 0.9rem;
 }
 
 .operator {
-    font-size: 1.2rem;
-    font-weight: bold;
-    transform: translateY(-5px); /* Adjusted position for desktop */
+font-size: 1.2rem;
+font-weight: bold;
 }
 
-/* Desktop Specific Adjustments */
-@media (min-width: 1200px) {
-    .locked-tokens-box h4 {
-        font-size: 1.2rem; /* Increased size for desktop */
-    }
-
-    .operator {
-        transform: translateY(-8px); /* Slightly higher position for desktop */
-    }
+/* Profile Box */
+.profile-box {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 8px 10px;
+background-color: rgba(255, 255, 255, 0.1);
+border-radius: 10px;
+font-size: 0.9rem;
+color: white;
+position: relative;
+max-width: 250px;
 }
 
-/* Mobile Adjustments */
+.profile-details {
+display: flex;
+flex-direction: column;
+gap: 5px;
+}
+
+.hamburger-menu {
+position: absolute;
+top: 5px;
+right: 5px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: 20px;
+width: 25px;
+cursor: pointer;
+}
+
+.hamburger-menu span {
+background-color: white;
+height: 3px;
+width: 100%;
+border-radius: 2px;
+transition: all 0.3s ease;
+}
+
+/* Navigation Menu */
+nav ul {
+list-style: none;
+display: none;
+flex-direction: column;
+gap: 10px;
+background-color: white;
+padding: 10px;
+border-radius: 8px;
+position: absolute;
+top: 60px;
+right: 20px;
+}
+
+nav ul.show {
+display: flex;
+}
+
+nav ul li a {
+color: black;
+text-decoration: none;
+font-weight: bold;
+}
+
+nav ul li a:hover {
+color: #FF4500;
+}
+
+/* Main Section */
+main {
+flex-grow: 1;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 20px;
+}
+
+.welcome h1 {
+font-size: 2.5rem;
+margin-bottom: 10px;
+}
+
+.welcome p {
+font-size: 1.2rem;
+}
+
+/* Buttons Section */
+.bottom-buttons {
+display: flex;
+justify-content: center;
+gap: 20px;
+padding: 20px;
+}
+
+.bottom-buttons button {
+background: linear-gradient(90deg, #FF6A00, #FF4500);
+color: white;
+border: none;
+border-radius: 10px;
+padding: 10px 20px;
+font-size: 1rem;
+cursor: pointer;
+transition: transform 0.2s, background 0.3s;
+}
+
+.bottom-buttons button:hover {
+transform: scale(1.1);
+background: linear-gradient(90deg, #FF4500, #FF6A00);
+}
+
+/* Footer */
+footer {
+background-color: #222;
+text-align: center;
+padding: 10px;
+color: #aaa;
+font-size: 0.9rem;
+margin-top: auto;
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
-    .locked-tokens-box {
-        margin: 0 auto;
-        padding: 5px;
-        font-size: 0.8rem;
-    }
-
-    .token img {
-        height: 30px;
-        width: 30px;
-    }
-
-    .token-value {
-        font-size: 0.8rem;
-    }
+header {
+flex-direction: row;
+justify-content: space-between;
+padding: 8px 10px;
 }
 
+```
+.logo-container img {
+    height: 40px;
+}
+
+.header-title {
+    display: none;
+}
+
+.locked-tokens-box {
+    margin: 0 auto;
+    padding: 5px;
+    font-size: 0.8rem;
+}
+
+.token img {
+    height: 30px;
+    width: 30px;
+}
+
+.token-value {
+    font-size: 0.8rem;
+}
+
+.profile-box {
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 10px;
+    max-width: 200px;
+}
+
+.profile-details {
+    font-size: 0.8rem;
+    gap: 2px;
+}
+
+```
+
+}
