@@ -17,11 +17,10 @@ body {
 /* Header */
 header {
     background: linear-gradient(90deg, #FF4500, #FFBB33);
-    padding: 10px 20px; /* Reduced padding for a thinner header */
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 /* Logo and Title Styling */
@@ -47,6 +46,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
     padding: 8px 10px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
@@ -56,13 +56,11 @@ header {
     max-width: 250px;
 }
 
-/* Adjust the text layout inside the profile box */
+/* Profile Box Details */
 .profile-details {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 5px;
-    width: 100%;
 }
 
 .profile-box .hamburger-menu {
@@ -91,7 +89,7 @@ nav ul {
     display: none; /* Hidden by default */
     flex-direction: column;
     gap: 10px;
-    background-color: #333;
+    background-color: white;
     padding: 10px;
     border-radius: 8px;
     position: absolute;
@@ -100,13 +98,12 @@ nav ul {
 }
 
 nav ul.show {
-    display: flex; /* Show menu when hamburger toggled */
-    background-color: white; /* White background */
-    color: black; /* Black text */
+    display: flex;
+    color: black; /* Black text when shown */
 }
 
 nav ul li a {
-    color: inherit; /* Ensure links inherit the color from the parent */
+    color: black;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -168,12 +165,11 @@ footer {
     margin-top: auto;
 }
 
-/* Media Queries for Mobile Responsiveness */
+/* Mobile View */
 @media (max-width: 768px) {
     header {
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
         padding: 8px 10px;
     }
 
@@ -182,7 +178,7 @@ footer {
     }
 
     .header-title {
-        display: none;
+        display: none; /* Hide on mobile */
     }
 
     .profile-box {
@@ -198,7 +194,6 @@ footer {
     }
 
     .profile-box .hamburger-menu {
-        position: absolute;
         top: 5px;
         right: 5px;
     }
