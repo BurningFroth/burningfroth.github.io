@@ -37,6 +37,7 @@ header {
     border-radius: 10px;
     text-align: center;
     color: white;
+    max-width: 350px;
 }
 
 .locked-tokens-box h4 {
@@ -52,9 +53,20 @@ header {
     gap: 10px;
 }
 
+.token {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
 .token img {
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
+}
+
+.token-value {
+    font-size: 0.9rem;
 }
 
 .operator {
@@ -200,14 +212,29 @@ footer {
     }
 
     .locked-tokens-box {
-        order: 2;
         margin: 0 auto;
         padding: 5px;
         font-size: 0.8rem;
     }
 
+    .token img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .token-value {
+        font-size: 0.8rem;
+    }
+
     .profile-box {
-        order: 3;
-        max-width: 180px;
+        flex-direction: row;
+        align-items: center;
+        padding: 5px 10px;
+        max-width: 200px;
+    }
+
+    .profile-details {
+        font-size: 0.8rem;
+        gap: 2px;
     }
 }
