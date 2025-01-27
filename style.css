@@ -32,12 +32,12 @@ header {
 }
 
 .logo-container img {
-    height: 60px; /* Increased size for desktop */
+    height: 60px;
     max-width: 100%;
 }
 
 .header-title {
-    font-size: 1.8rem; /* Increased font size for the title */
+    font-size: 1.8rem;
     font-weight: bold;
     color: white;
 }
@@ -52,8 +52,8 @@ header {
     border-radius: 10px;
     font-size: 0.9rem;
     color: white;
-    position: relative; /* To position the hamburger in the top-right */
-    max-width: 250px; /* Adjusted size */
+    position: relative;
+    max-width: 250px;
 }
 
 /* Adjust the text layout inside the profile box */
@@ -101,16 +101,18 @@ nav ul {
 
 nav ul.show {
     display: flex; /* Show menu when hamburger toggled */
+    background-color: white; /* White background */
+    color: black; /* Black text */
 }
 
 nav ul li a {
-    color: white;
+    color: inherit; /* Ensure links inherit the color from the parent */
     text-decoration: none;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #FFD700;
+    color: #FF4500;
 }
 
 /* Main Section */
@@ -172,31 +174,26 @@ footer {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 8px 10px; /* Smaller header for mobile */
-    }
-
-    .logo-container {
-        display: flex;
-        align-items: center;
+        padding: 8px 10px;
     }
 
     .logo-container img {
-        height: 40px; /* Smaller logo for mobile */
+        height: 40px;
     }
 
     .header-title {
-        display: none; /* Remove title text on mobile */
+        display: none;
     }
 
     .profile-box {
-        flex-direction: row; /* Compact layout for mobile */
+        flex-direction: row;
         align-items: center;
-        padding: 5px 10px; /* Adjust padding for compact design */
+        padding: 5px 10px;
         max-width: 180px;
     }
 
     .profile-details {
-        font-size: 0.8rem; /* Keep font small for mobile */
+        font-size: 0.8rem;
         gap: 2px;
     }
 
