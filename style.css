@@ -32,11 +32,11 @@ header {
 }
 
 .logo-container img {
-    height: 100px; /* Increased logo size */
+    height: 100px;
 }
 
 .header-title {
-    font-size: 2.5rem; /* Increased title font size */
+    font-size: 2.5rem;
     font-weight: bold;
     color: white;
 }
@@ -110,19 +110,19 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 15px; /* Increased padding */
+    padding: 15px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     color: white;
-    max-width: 300px; /* Slightly increased width */
+    max-width: 300px;
     position: relative;
-    font-size: 1rem; /* Increased font size for text */
+    font-size: 1rem;
 }
 
 .profile-details {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Slightly increased spacing between rows */
+    gap: 10px;
 }
 
 .hamburger-menu {
@@ -132,8 +132,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 25px; /* Adjusted for alignment */
-    width: 30px; /* Adjusted for alignment */
+    height: 25px;
+    width: 30px;
     cursor: pointer;
 }
 
@@ -179,4 +179,29 @@ footer {
     padding: 10px;
     color: #aaa;
     font-size: 0.9rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .logo-container {
+        display: none; /* Hide the logo and title on mobile */
+    }
+
+    .profile-box {
+        max-width: 280px; /* Slightly adjusted width for mobile */
+        padding: 10px;
+    }
+
+    .locked-tokens-box {
+        max-width: 320px; /* Adjust display box for mobile */
+    }
+
+    .token img {
+        height: 40px; /* Slightly smaller images for mobile */
+        width: 40px;
+    }
+
+    .token-value {
+        font-size: 1rem; /* Adjusted font size for numbers */
+    }
 }
