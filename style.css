@@ -24,7 +24,109 @@ header {
     flex-wrap: wrap;
 }
 
-/* Hamburger Menu */
+/* Logo and Title Styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-container img {
+    height: 100px; /* Fixed consistent size for logo */
+}
+
+.header-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Locked Tokens Box */
+.locked-tokens-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    max-width: 300px; /* Ensure box doesn't stretch too wide */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px; /* Adjust height for better layout */
+    position: relative;
+}
+
+.token-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.token {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.token img {
+    height: 40px; /* Fixed image size */
+    width: 40px;
+    object-fit: contain; /* Ensure image fits within the boundaries */
+}
+
+.token-value {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.operator {
+    font-size: 1.2rem;
+    font-weight: bold;
+    transform: translateY(-5px);
+}
+
+/* Locked Tokens Button */
+.locked-tokens-button {
+    margin-top: 5px;
+    background: linear-gradient(90deg, #00FF00, #008000);
+    color: white;
+    border: 2px solid #004400;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.locked-tokens-button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #008000, #00FF00);
+}
+
+/* Profile Box */
+.profile-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: white;
+    max-width: 300px; /* Fixed width */
+    position: relative;
+    font-size: 1rem;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 .hamburger-menu {
     position: absolute;
     top: 5px;
@@ -37,7 +139,6 @@ header {
     cursor: pointer;
 }
 
-/* Default Desktop Hamburger (Three Lines) */
 .hamburger-menu span {
     background-color: white;
     height: 3px;
@@ -46,28 +147,8 @@ header {
     transition: all 0.3s ease;
 }
 
-/* Mobile Hamburger Image */
-.hamburger-menu img.mobile-burger {
-    display: none; /* Hide the image by default */
-    height: 30px;
-    width: 30px;
-    cursor: pointer;
-}
-
-/* Locked Tokens Box */
-.locked-tokens-box {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-    color: white;
-    max-width: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 150px;
-    position: relative;
+.hamburger-menu img {
+    display: none;
 }
 
 /* Navigation Menu */
@@ -110,14 +191,31 @@ footer {
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .logo-container {
-        display: none; /* Hide the logo and title on mobile */
+        display: none; /* Hide logo and title on mobile */
+    }
+
+    .hamburger-menu img {
+        display: block; /* Show image hamburger menu */
+        height: 30px;
+        width: 30px;
     }
 
     .hamburger-menu span {
-        display: none; /* Hide the default three lines on mobile */
+        display: none; /* Hide lines on mobile */
     }
 
-    .hamburger-menu img.mobile-burger {
-        display: block; /* Show the image on mobile */
+    .locked-tokens-box {
+        max-width: 280px; /* Adjusted for mobile */
+        height: 180px; /* Compact display */
+    }
+
+    .token img {
+        height: 35px; /* Reduced size for mobile */
+        width: 35px;
+    }
+
+    .token-value {
+        font-size: 0.9rem; /* Adjusted for readability */
     }
 }
+
