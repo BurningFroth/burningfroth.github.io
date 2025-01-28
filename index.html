@@ -7,77 +7,87 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header Section -->
+    <!-- Header -->
     <header>
-        <div class="container">
-            <img src="BeFunky-design burningfroth logo.jpg" alt="BurningFroth Logo" class="logo">
-            <h1>BurningFroth</h1>
-            <p class="slogan">Where Milestones Are Forged in Fire</p>
+        <!-- Logo and Title -->
+        <div class="logo-container">
+            <img src="BeFunky-design burningfroth logo.jpg" alt="BurningFroth Logo">
+            <span class="header-title">BurningFroth</span>
         </div>
-    </header>
 
-    <!-- Banner Section -->
-    <section class="banner">
-        <img src="BeFunky-design banner.jpg" alt="BurningFroth Banner">
-    </section>
-
-    <!-- Intro Section -->
-    <section class="intro">
-        <div class="container">
-            <h2>Welcome to BurningFroth</h2>
-            <p>The forge is heating up. BurningFroth is being built—a gamified world where every Froth burned fuels your rise to the top. Compete for milestones, dominate leaderboards, and power up your NFTs in a community-driven ecosystem designed to reward the bold. The journey begins soon—are you ready to ignite the fire?</p>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2>Coming Soon to the Froth-Burning Revolution</h2>
-            <ul>
-                <li>
-                    <img src="BeFunky-design flame.jpg" alt="Flame Icon" class="feature-icon">
-                    Burn Froth to climb leaderboards and stake your claim as a legend.
-                </li>
-                <li>
-                    <img src="BeFunky-design lightning.jpg" alt="Lightning Icon" class="feature-icon">
-                    Collect and power up milestone NFTs to forge your legacy.
-                </li>
-                <li>
-                    <img src="BeFunky-design controler.jpg" alt="Controller Icon" class="feature-icon">
-                    Join a competitive yet collaborative community where every action counts.
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Additional Icons Section -->
-    <section class="extras">
-        <div class="container">
-            <h2>What Fuels the Forge?</h2>
-            <div class="extras-grid">
-                <div>
-                    <img src="BeFunky-design handshake.jpg" alt="Handshake Icon" class="extra-icon">
-                    <p>Collaborative Community</p>
+        <!-- Locked Tokens Display -->
+        <div class="locked-tokens-box">
+            <h4>Locked Tokens</h4>
+            <div class="token-display">
+                <div class="token">
+                    <img src="BeFunky-design liquidity token.png" alt="Liquidity Token">
+                    <span class="token-value">40</span>
                 </div>
-                <div>
-                    <img src="BeFunky-design Anvil (1).jpg" alt="Anvil Icon" class="extra-icon">
-                    <p>Forge Your Legacy</p>
+                <span class="operator">+</span>
+                <div class="token">
+                    <img src="BeFunky-design froth logo.png" alt="Froth Token">
+                    <span class="token-value">250</span>
                 </div>
-                <div>
-                    <img src="BeFunky-design trophy.jpg" alt="Trophy Icon" class="extra-icon">
-                    <p>Claim the Leaderboard</p>
+                <span class="operator">=</span>
+                <div class="token">
+                    <img src="BeFunky-design flame boost.png" alt="Flame Boost">
+                    <span class="token-value">75</span>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <p>Follow us for updates:</p>
-            <a href="https://twitter.com/BurningFroth" target="_blank">Visit Us on X</a>
-            <p>&copy; 2025 BurningFroth. All rights reserved.</p>
+        <!-- Profile Box -->
+        <div class="profile-box">
+            <div class="profile-details">
+                <span>Flow: 120</span>
+                <span>Froth: 250</span>
+                <span>Burn Token: 75</span>
+                <span>Liquidity Token: 40</span>
+            </div>
+            <div class="hamburger-menu">
+                <img src="BeFunky-design burningfroth logo.jpg" alt="Menu" class="burger-logo">
+            </div>
         </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Leaderboards</a></li>
+            <li><a href="#">Milestones</a></li>
+            <li><a href="#">Marketplace</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="welcome">
+            <h1>Welcome to BurningFroth</h1>
+            <p>Explore the future of Froth-burning milestones and leaderboards!</p>
+        </div>
+    </main>
+
+    <!-- Buttons Section -->
+    <div class="bottom-buttons">
+        <button>Buy</button>
+        <button>Mint</button>
+        <button>Burn</button>
+        <button>Claim</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 BurningFroth. All rights reserved.</p>
     </footer>
+
+    <!-- Add JavaScript for Hamburger Menu -->
+    <script>
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const navMenu = document.querySelector('nav ul');
+
+        hamburgerMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
