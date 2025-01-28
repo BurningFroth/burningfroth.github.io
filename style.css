@@ -11,7 +11,7 @@ body {
     color: white;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; /* Ensure the body takes up at least the full screen height */
 }
 
 /* Header */
@@ -48,141 +48,40 @@ header {
     border-radius: 10px;
     text-align: center;
     color: white;
-    max-width: 300px; /* Prevent box from growing too wide */
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 200px; /* Fixed height to maintain structure */
+    height: 200px;
     position: relative;
     overflow: hidden; /* Prevent content overflow */
 }
 
-.token-display {
+/* Buttons Section */
+.bottom-buttons {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
+    padding: 20px;
+    margin-top: auto; /* Push this section above the footer */
 }
 
-.token {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-}
-
-.token img {
-    height: 40px; /* Fixed size for images */
-    width: 40px; /* Prevent images from growing */
-    max-width: 100%; /* Ensure images fit within their container */
-    max-height: 100%; /* Prevent overflow */
-    object-fit: contain; /* Maintain aspect ratio */
-}
-
-.token-value {
-    font-size: 1rem;
-    text-align: center;
-}
-
-.operator {
-    font-size: 1.2rem;
-    font-weight: bold;
-    transform: translateY(-5px);
-}
-
-/* Locked Tokens Button */
-.locked-tokens-button {
-    margin-top: 5px;
-    background: linear-gradient(90deg, #00FF00, #008000);
+.bottom-buttons button {
+    background: linear-gradient(90deg, #FF6A00, #FF4500);
     color: white;
-    border: 2px solid #004400;
+    border: none;
     border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 1.1rem;
+    padding: 15px 30px; /* Larger button size */
+    font-size: 1.2rem; /* Increased font size */
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.2s, background 0.3s;
 }
 
-.locked-tokens-button:hover {
+.bottom-buttons button:hover {
     transform: scale(1.1);
-    background: linear-gradient(90deg, #008000, #00FF00);
-}
-
-/* Profile Box */
-.profile-box {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    color: white;
-    max-width: 300px; /* Prevent the box from growing */
-    height: auto; /* Let the box adjust dynamically */
-    position: relative;
-    font-size: 1rem;
-    overflow: hidden; /* Prevent content overflow */
-}
-
-.profile-details {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-/* Hamburger Menu */
-.hamburger-menu {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 25px;
-    width: 30px;
-    cursor: pointer;
-}
-
-.hamburger-menu span {
-    background-color: white;
-    height: 3px;
-    width: 100%;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
-.hamburger-menu img {
-    display: none;
-}
-
-/* Navigation Menu */
-nav ul {
-    list-style: none;
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    background-color: white;
-    padding: 10px;
-    border-radius: 8px;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-}
-
-nav ul.show {
-    display: flex;
-}
-
-nav ul li a {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #FF4500;
+    background: linear-gradient(90deg, #FF4500, #FF6A00);
 }
 
 /* Footer */
@@ -192,40 +91,6 @@ footer {
     padding: 10px;
     color: #aaa;
     font-size: 0.9rem;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .logo-container {
-        display: none; /* Hide logo and title on mobile */
-    }
-
-    .hamburger-menu img {
-        display: block; /* Show image for mobile */
-        height: 40px; /* Adjusted size for mobile */
-        width: 40px; /* Adjusted size for mobile */
-        position: absolute;
-        top: 5px;
-        left: -15px; /* Shifted left slightly */
-        cursor: pointer;
-    }
-
-    .hamburger-menu span {
-        display: none; /* Hide lines on mobile */
-    }
-
-    .locked-tokens-box {
-        max-width: 280px; /* Compact size for mobile */
-        height: 180px; /* Adjusted height for mobile */
-    }
-
-    .token img {
-        height: 35px; /* Smaller size for mobile images */
-        width: 35px;
-        object-fit: contain;
-    }
-
-    .token-value {
-        font-size: 0.9rem; /* Adjusted font size for mobile */
-    }
+    margin-top: auto; /* Push footer to the bottom */
+    width: 100%; /* Make footer span the entire screen width */
 }
