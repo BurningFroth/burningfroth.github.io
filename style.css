@@ -37,11 +37,56 @@ header {
 }
 
 .header-title {
-    font-size: 2rem; /* Larger title for desktop */
+    font-size: 2.5rem; /* Increased font size for desktop */
     font-weight: bold;
     color: white;
-    font-family: 'Arial', sans-serif; /* Clear and professional font */
-    text-transform: uppercase; /* Optional: Makes text all caps */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Locked Tokens Box */
+.locked-tokens-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    max-width: 350px;
+}
+
+.locked-tokens-box h4 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 1px solid black; /* Border for desktop */
+}
+
+.token-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.token {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.token img {
+    height: 40px;
+    width: 40px;
+}
+
+.token-value {
+    font-size: 0.9rem;
+}
+
+.operator {
+    font-size: 1.2rem;
+    font-weight: bold;
+    transform: translateY(-5px); /* Slightly higher */
 }
 
 /* Profile Box */
@@ -62,26 +107,6 @@ header {
     display: flex;
     flex-direction: column;
     gap: 5px;
-}
-
-.hamburger-menu {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 20px;
-    width: 25px;
-    cursor: pointer;
-}
-
-.hamburger-menu span {
-    background-color: white;
-    height: 3px;
-    width: 100%;
-    border-radius: 2px;
-    transition: all 0.3s ease;
 }
 
 /* Navigation Menu */
@@ -131,30 +156,6 @@ main {
     font-size: 1.2rem;
 }
 
-/* Buttons Section */
-.bottom-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.bottom-buttons button {
-    background: linear-gradient(90deg, #FF6A00, #FF4500);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: transform 0.2s, background 0.3s;
-}
-
-.bottom-buttons button:hover {
-    transform: scale(1.1);
-    background: linear-gradient(90deg, #FF4500, #FF6A00);
-}
-
 /* Footer */
 footer {
     background-color: #222;
@@ -179,6 +180,21 @@ footer {
 
     .header-title {
         display: none;
+    }
+
+    .locked-tokens-box {
+        margin: 0 auto;
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+    .token img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .token-value {
+        font-size: 0.8rem;
     }
 
     .profile-box {
