@@ -129,22 +129,15 @@ header {
     position: absolute;
     top: 5px;
     right: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 25px;
-    width: 30px;
     cursor: pointer;
 }
 
-.hamburger-menu span {
-    background-color: white;
-    height: 3px;
-    width: 100%;
-    border-radius: 2px;
-    transition: all 0.3s ease;
+.hamburger-menu img {
+    height: 30px; /* Adjust the image size */
+    width: 30px;
 }
 
+/* Navigation Menu */
 nav ul {
     list-style: none;
     display: none;
@@ -187,21 +180,27 @@ footer {
         display: none; /* Hide the logo and title on mobile */
     }
 
+    .hamburger-menu img {
+        display: block;
+        height: 30px;
+        width: 30px; /* Ensure proper scaling for mobile */
+    }
+
     .profile-box {
-        max-width: 280px; /* Slightly adjusted width for mobile */
+        max-width: 280px;
         padding: 10px;
     }
 
     .locked-tokens-box {
-        max-width: 320px; /* Adjust display box for mobile */
+        max-width: 320px;
     }
 
     .token img {
-        height: 40px; /* Slightly smaller images for mobile */
+        height: 40px;
         width: 40px;
     }
 
     .token-value {
-        font-size: 1rem; /* Adjusted font size for numbers */
+        font-size: 1rem;
     }
 }
