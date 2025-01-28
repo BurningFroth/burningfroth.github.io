@@ -26,7 +26,7 @@ header {
 
 /* Logo */
 .logo-container img {
-    height: 60px;
+    height: 80px; /* Increased size for desktop */
     max-width: 100%;
 }
 
@@ -204,7 +204,7 @@ footer {
     }
 
     .logo-container img {
-        height: 40px;
+        height: 40px; /* Smaller logo for mobile */
     }
 
     .header-title {
