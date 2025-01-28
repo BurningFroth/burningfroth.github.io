@@ -159,3 +159,29 @@ footer {
     width: 100%; /* Ensure it spans the full width */
     margin-top: auto; /* Pin it to the bottom of the screen */
 }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .logo-container {
+        display: none; /* Hide logo and title on mobile */
+    }
+
+    .hamburger-menu img {
+        display: block; /* Show hamburger menu image */
+        height: 35px;
+        width: 35px;
+    }
+
+    .hamburger-menu span {
+        display: none; /* Hide lines on mobile */
+    }
+
+    .locked-tokens-box {
+        max-width: 260px; /* Adjust size for mobile */
+    }
+
+    .token img {
+        height: 30px; /* Smaller size for mobile images */
+        width: 30px;
+    }
+}
