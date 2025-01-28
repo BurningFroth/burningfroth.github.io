@@ -44,28 +44,35 @@ header {
 /* Locked Tokens Box */
 .locked-tokens-box {
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 15px; /* Increased padding for better size */
+    padding: 10px;
     border-radius: 10px;
     text-align: center;
     color: white;
-    max-width: 400px; /* Slightly larger width */
+    max-width: 350px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Space between content */
+    justify-content: space-between;
     align-items: center;
-    height: 180px; /* Set height to ensure space for the button */
+    height: 140px; /* Compact height */
     position: relative;
+}
+
+.token-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Reduced gap for compact spacing */
 }
 
 .locked-tokens-button {
     position: absolute;
-    bottom: 10px; /* Align to the bottom of the box */
+    bottom: 5px; /* Reduced space below the button */
     background: linear-gradient(90deg, #00FF00, #008000);
     color: white;
     border: 2px solid #004400;
     border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 1.2rem;
+    padding: 8px 16px; /* Smaller button padding */
+    font-size: 1rem; /* Adjusted for compactness */
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.2s, background 0.3s;
@@ -76,37 +83,22 @@ header {
     background: linear-gradient(90deg, #008000, #00FF00);
 }
 
-/* Token Display */
-.token-display {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px; /* Slightly larger gap for spacing */
-}
-
-.token {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-}
-
 .token img {
-    height: 50px; /* Increased size for locked Froth display */
-    width: 50px;
+    height: 40px;
+    width: 40px;
 }
 
 .token-value {
-    font-size: 1rem; /* Slightly larger font size */
+    font-size: 0.9rem;
 }
 
 .operator {
-    font-size: 1.4rem; /* Increased operator size */
+    font-size: 1.2rem;
     font-weight: bold;
     transform: translateY(-5px);
 }
 
-/* Other Styles (Unchanged) */
+/* Profile Box */
 .profile-box {
     display: flex;
     flex-direction: column;
