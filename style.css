@@ -21,7 +21,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
+    flex-wrap: wrap;
 }
 
 /* Logo and Title Styling */
@@ -49,9 +49,6 @@ header {
     text-align: center;
     color: white;
     max-width: 350px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .locked-tokens-box h4 {
@@ -222,16 +219,23 @@ footer {
         padding: 8px 10px;
     }
 
+    .logo-container img {
+        height: 60px;
+    }
+
+    .header-title {
+        display: none;
+    }
+
     .locked-tokens-box {
         margin: 0 auto;
-        padding: 10px;
-        font-size: 0.9rem;
-        max-width: 300px;
+        padding: 5px;
+        font-size: 0.8rem;
     }
 
     .token img {
-        height: 35px;
-        width: 35px;
+        height: 30px;
+        width: 30px;
     }
 
     .profile-box {
@@ -240,22 +244,13 @@ footer {
         padding: 5px 10px;
         max-width: 200px;
     }
-
-    .hamburger-menu {
-        background: url('BeFunky-design logo writing logo.png') no-repeat center center;
-        background-size: contain;
-        height: 40px;
-        width: 40px;
-        border: none;
-    }
-
-    .hamburger-menu span {
-        display: none; /* Remove the default lines */
-    }
-
-    .logo-container img {
-        display: none; /* Hide logo from original position */
-    }
 }
-
+/* Desktop Locked Tokens Adjustment */
+@media (min-width: 768px) {
+    .locked-tokens-box {
+        margin: 0 auto; /* Center the box horizontally */
+        position: absolute; /* Remove from the normal document flow */
+        left: 50%; /* Move to the center */
+        transform: translateX(-50%); /* Adjust for the element's width */
+    }
 }
