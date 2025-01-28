@@ -21,7 +21,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    position: relative;
 }
 
 /* Logo and Title Styling */
@@ -49,6 +49,9 @@ header {
     text-align: center;
     color: white;
     max-width: 350px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .locked-tokens-box h4 {
@@ -252,31 +255,5 @@ footer {
 
     .logo-container img {
         display: none; /* Hide logo from original position */
-    }
-}
-
-/* Desktop Locked Tokens Adjustment */
-@media (min-width: 768px) {
-    .locked-tokens-box {
-        margin: 0 auto; /* Center the box horizontally */
-        position: absolute; /* Remove from the normal document flow */
-        left: 50%; /* Move to the center */
-        transform: translateX(-50%); /* Adjust for the element's width */
-    }
-
-    .hamburger-menu span {
-        display: block; /* Restore hamburger button lines */
-    }
-
-    .hamburger-menu {
-        background: none; /* Remove logo from the burger button */
-    }
-
-    .logo-container img {
-        display: block; /* Show logo in its original position */
-    }
-
-    .header-title {
-        display: inline; /* Show the title next to the logo */
     }
 }
