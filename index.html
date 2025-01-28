@@ -1,88 +1,282 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BurningFroth</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <!-- Locked Tokens Display -->
-        <div class="locked-tokens-box">
-            <h4>Locked Tokens</h4>
-            <div class="token-display">
-                <div class="token">
-                    <img src="BeFunky-design liquidity token.png" alt="Liquidity Token">
-                    <span class="token-value">40</span>
-                </div>
-                <span class="operator">+</span>
-                <div class="token">
-                    <img src="BeFunky-design foth logo.png" alt="Froth Token">
-                    <span class="token-value">250</span>
-                </div>
-                <span class="operator">=</span>
-                <div class="token">
-                    <img src="BeFunky-design flame boost.png" alt="Flame Boost">
-                    <span class="token-value">75</span>
-                </div>
-            </div>
-        </div>
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        <!-- Profile Box -->
-        <div class="profile-box">
-            <div class="profile-details">
-                <span>Flow: 120</span>
-                <span>Froth: 250</span>
-                <span>Burn Token: 75</span>
-                <span>Liquidity Token: 40</span>
-            </div>
-            <!-- Hamburger Menu -->
-            <div class="hamburger-menu"></div>
-        </div>
-    </header>
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #111;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-    <!-- Navigation Menu -->
-    <nav>
-        <ul class="menu">
-            <li><a href="#">Leaderboards</a></li>
-            <li><a href="#">Milestones</a></li>
-            <li><a href="#">Marketplace</a></li>
-        </ul>
-    </nav>
+/* Header */
+header {
+    background: linear-gradient(90deg, #FF4500, #FFBB33);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
-    <!-- Main Content -->
-    <main>
-        <div class="welcome">
-            <h1>Welcome to BurningFroth</h1>
-            <p>Explore the future of Froth-burning milestones and leaderboards!</p>
-        </div>
-    </main>
+/* Logo and Title Styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
-    <!-- Buttons Section -->
-    <div class="bottom-buttons">
-        <button>Buy</button>
-        <button>Mint</button>
-        <button>Burn</button>
-        <button>Claim</button>
-    </div>
+.logo-container img {
+    height: 80px;
+}
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 BurningFroth. All rights reserved.</p>
-    </footer>
+.header-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
 
-    <!-- Add JavaScript for Hamburger Menu -->
-    <script>
-        const hamburgerMenu = document.querySelector('.hamburger-menu');
-        const navMenu = document.querySelector('nav ul');
+/* Locked Tokens Box */
+.locked-tokens-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    max-width: 350px;
+}
 
-        hamburgerMenu.addEventListener('click', () => {
-            navMenu.classList.toggle('show');
-        });
-    </script>
-</body>
-</html>
+.locked-tokens-box h4 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 1px solid black;
+}
 
+.token-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.token {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.token img {
+    height: 40px;
+    width: 40px;
+}
+
+.token-value {
+    font-size: 0.9rem;
+}
+
+.operator {
+    font-size: 1.2rem;
+    font-weight: bold;
+    transform: translateY(-5px);
+}
+
+/* Profile Box */
+.profile-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: white;
+    max-width: 250px;
+    position: relative;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger-menu {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+}
+
+nav ul.show {
+    display: flex;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #FF4500;
+}
+
+/* Main Section */
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.welcome {
+    text-align: center;
+}
+
+.welcome h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    font-size: 1.2rem;
+}
+
+/* Buttons Section */
+.bottom-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: auto;
+}
+
+.bottom-buttons button {
+    background: linear-gradient(90deg, #FF6A00, #FF4500);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.bottom-buttons button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #FF4500, #FF6A00);
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    text-align: center;
+    padding: 10px;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 8px 10px;
+    }
+
+    .locked-tokens-box {
+        margin: 0 auto;
+        padding: 10px;
+        font-size: 0.9rem;
+        max-width: 300px;
+    }
+
+    .token img {
+        height: 35px;
+        width: 35px;
+    }
+
+    .profile-box {
+        flex-direction: row;
+        align-items: center;
+        padding: 5px 10px;
+        max-width: 200px;
+    }
+
+    .hamburger-menu {
+        background: url('BeFunky-design logo writing logo.png') no-repeat center center;
+        background-size: contain;
+        height: 40px;
+        width: 40px;
+        border: none;
+    }
+
+    .hamburger-menu span {
+        display: none; /* Remove the default lines */
+    }
+
+    .logo-container img {
+        display: none; /* Hide logo from original position */
+    }
+}
+
+/* Desktop Locked Tokens Adjustment */
+@media (min-width: 768px) {
+    .locked-tokens-box {
+        margin: 0 auto; /* Center the box horizontally */
+        position: absolute; /* Remove from the normal document flow */
+        left: 50%; /* Move to the center */
+        transform: translateX(-50%); /* Adjust for the element's width */
+    }
+
+    .hamburger-menu span {
+        display: block; /* Restore hamburger button lines */
+    }
+
+    .hamburger-menu {
+        background: none; /* Remove logo from the burger button */
+    }
+
+    .logo-container img {
+        display: block; /* Show logo in its original position */
+    }
+
+    .header-title {
+        display: inline; /* Show the title next to the logo */
+    }
+}
