@@ -28,15 +28,15 @@ header {
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
 }
 
 .logo-container img {
-    height: 80px;
+    height: 100px; /* Increased logo size */
 }
 
 .header-title {
-    font-size: 2rem;
+    font-size: 2.5rem; /* Increased title font size */
     font-weight: bold;
     color: white;
 }
@@ -53,7 +53,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 150px; /* Adjusted height for compact look */
+    height: 150px;
     position: relative;
 }
 
@@ -61,7 +61,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px; /* Reduced gap */
+    gap: 10px;
 }
 
 .token {
@@ -72,12 +72,12 @@ header {
 }
 
 .token img {
-    height: 50px; /* Increased image size */
+    height: 50px;
     width: 50px;
 }
 
 .token-value {
-    font-size: 1.1rem; /* Slightly larger font for numbers */
+    font-size: 1.1rem;
 }
 
 .operator {
@@ -87,14 +87,14 @@ header {
 }
 
 .locked-tokens-button {
-    position: relative; /* Adjusted for tighter placement */
-    margin-top: 5px; /* Reduced spacing above the button */
+    position: relative;
+    margin-top: 5px;
     background: linear-gradient(90deg, #00FF00, #008000);
     color: white;
     border: 2px solid #004400;
     border-radius: 10px;
-    padding: 10px 20px; /* Slightly increased button size */
-    font-size: 1.1rem; /* Larger font for button text */
+    padding: 10px 20px;
+    font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.2s, background 0.3s;
@@ -110,18 +110,19 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 10px;
+    padding: 15px; /* Increased padding */
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     color: white;
-    max-width: 250px;
+    max-width: 300px; /* Slightly increased width */
     position: relative;
+    font-size: 1rem; /* Increased font size for text */
 }
 
 .profile-details {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px; /* Slightly increased spacing between rows */
 }
 
 .hamburger-menu {
@@ -131,8 +132,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 20px;
-    width: 25px;
+    height: 25px; /* Adjusted for alignment */
+    width: 30px; /* Adjusted for alignment */
     cursor: pointer;
 }
 
