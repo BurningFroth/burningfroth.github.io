@@ -24,54 +24,24 @@ header {
     flex-wrap: wrap;
 }
 
-/* Logo */
+/* Logo and Title Styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 .logo-container img {
-    height: 80px; /* Increased size for desktop */
+    height: 80px;
     max-width: 100%;
 }
 
-/* Locked Tokens Box */
-.locked-tokens-box {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
+.header-title {
+    font-size: 2rem; /* Larger title for desktop */
+    font-weight: bold;
     color: white;
-    max-width: 350px;
-}
-
-.locked-tokens-box h4 {
-    margin-bottom: 5px;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-.token-display {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.token {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-}
-
-.token img {
-    height: 40px;
-    width: 40px;
-}
-
-.token-value {
-    font-size: 0.9rem;
-}
-
-.operator {
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-family: 'Arial', sans-serif; /* Clear and professional font */
+    text-transform: uppercase; /* Optional: Makes text all caps */
 }
 
 /* Profile Box */
@@ -204,26 +174,11 @@ footer {
     }
 
     .logo-container img {
-        height: 40px; /* Smaller logo for mobile */
+        height: 40px;
     }
 
     .header-title {
         display: none;
-    }
-
-    .locked-tokens-box {
-        margin: 0 auto;
-        padding: 5px;
-        font-size: 0.8rem;
-    }
-
-    .token img {
-        height: 30px;
-        width: 30px;
-    }
-
-    .token-value {
-        font-size: 0.8rem;
     }
 
     .profile-box {
@@ -238,3 +193,4 @@ footer {
         gap: 2px;
     }
 }
+
