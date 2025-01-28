@@ -24,19 +24,20 @@ header {
     flex-wrap: wrap;
 }
 
-/* Logo and Title Styling */
+/* Logo */
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 .logo-container img {
-    height: 80px;
+    height: 70px; /* Adjusted size for desktop */
+    max-width: 100%;
 }
 
 .header-title {
-    font-size: 2rem;
+    font-size: 2rem; /* Increased size */
     font-weight: bold;
     color: white;
 }
@@ -49,13 +50,15 @@ header {
     text-align: center;
     color: white;
     max-width: 350px;
+    margin: 0 auto;
 }
 
 .locked-tokens-box h4 {
     margin-bottom: 5px;
     font-size: 1.2rem;
     font-weight: bold;
-    border: 1px solid black;
+    border: 2px solid black;
+    padding: 5px;
 }
 
 .token-display {
@@ -73,18 +76,19 @@ header {
 }
 
 .token img {
-    height: 40px;
-    width: 40px;
+    height: 50px; /* Increased size */
+    width: 50px;
 }
 
 .token-value {
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .operator {
     font-size: 1.2rem;
     font-weight: bold;
-    transform: translateY(-8px); /* Slightly higher adjustment */
+    position: relative;
+    top: -5px; /* Adjusted positioning */
 }
 
 /* Profile Box */
@@ -92,12 +96,13 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 10px;
+    padding: 8px 10px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
+    font-size: 0.9rem;
     color: white;
-    max-width: 250px;
     position: relative;
+    max-width: 250px;
 }
 
 .profile-details {
@@ -164,10 +169,6 @@ main {
     padding: 20px;
 }
 
-.welcome {
-    text-align: center;
-}
-
 .welcome h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
@@ -183,7 +184,6 @@ main {
     justify-content: center;
     gap: 20px;
     padding: 20px;
-    margin-top: auto;
 }
 
 .bottom-buttons button {
@@ -191,8 +191,8 @@ main {
     color: white;
     border: none;
     border-radius: 10px;
-    padding: 15px 25px;
-    font-size: 1.2rem;
+    padding: 10px 20px;
+    font-size: 1rem;
     cursor: pointer;
     transition: transform 0.2s, background 0.3s;
 }
@@ -209,6 +209,7 @@ footer {
     padding: 10px;
     color: #aaa;
     font-size: 0.9rem;
+    margin-top: auto;
 }
 
 /* Mobile Responsive */
@@ -220,11 +221,11 @@ footer {
     }
 
     .logo-container img {
-        height: 60px;
+        height: 50px; /* Increased size for mobile */
     }
 
     .header-title {
-        display: none;
+        display: none; /* Hide title on mobile */
     }
 
     .locked-tokens-box {
@@ -234,8 +235,12 @@ footer {
     }
 
     .token img {
-        height: 30px;
-        width: 30px;
+        height: 40px;
+        width: 40px;
+    }
+
+    .token-value {
+        font-size: 0.8rem;
     }
 
     .profile-box {
@@ -243,5 +248,10 @@ footer {
         align-items: center;
         padding: 5px 10px;
         max-width: 200px;
+    }
+
+    .profile-details {
+        font-size: 0.8rem;
+        gap: 2px;
     }
 }
