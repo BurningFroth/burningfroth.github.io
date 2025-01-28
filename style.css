@@ -24,20 +24,19 @@ header {
     flex-wrap: wrap;
 }
 
-/* Logo */
+/* Logo and Title Styling */
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .logo-container img {
-    height: 60px; /* Adjust size as needed */
-    max-width: 100%;
+    height: 80px;
 }
 
 .header-title {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: bold;
     color: white;
 }
@@ -50,7 +49,27 @@ header {
     text-align: center;
     color: white;
     max-width: 350px;
-    margin: 0 auto; /* Ensure it's centered */
+}
+
+.locked-tokens-box h4 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.token-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.token {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
 }
 
 .token img {
@@ -65,8 +84,7 @@ header {
 .operator {
     font-size: 1.2rem;
     font-weight: bold;
-    position: relative;
-    top: -5px; /* Adjusted positioning */
+    transform: translateY(-5px);
 }
 
 /* Profile Box */
@@ -74,13 +92,12 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 8px 10px;
+    padding: 10px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    font-size: 0.9rem;
     color: white;
-    position: relative;
     max-width: 250px;
+    position: relative;
 }
 
 .profile-details {
@@ -147,6 +164,10 @@ main {
     padding: 20px;
 }
 
+.welcome {
+    text-align: center;
+}
+
 .welcome h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
@@ -162,6 +183,7 @@ main {
     justify-content: center;
     gap: 20px;
     padding: 20px;
+    margin-top: auto;
 }
 
 .bottom-buttons button {
@@ -169,8 +191,8 @@ main {
     color: white;
     border: none;
     border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 15px 25px;
+    font-size: 1.2rem;
     cursor: pointer;
     transition: transform 0.2s, background 0.3s;
 }
@@ -187,7 +209,6 @@ footer {
     padding: 10px;
     color: #aaa;
     font-size: 0.9rem;
-    margin-top: auto;
 }
 
 /* Mobile Responsive */
@@ -199,7 +220,7 @@ footer {
     }
 
     .logo-container img {
-        height: 50px;
+        height: 60px;
     }
 
     .header-title {
@@ -213,12 +234,8 @@ footer {
     }
 
     .token img {
-        height: 40px;
-        width: 40px;
-    }
-
-    .token-value {
-        font-size: 0.8rem;
+        height: 30px;
+        width: 30px;
     }
 
     .profile-box {
@@ -226,10 +243,5 @@ footer {
         align-items: center;
         padding: 5px 10px;
         max-width: 200px;
-    }
-
-    .profile-details {
-        font-size: 0.8rem;
-        gap: 2px;
     }
 }
