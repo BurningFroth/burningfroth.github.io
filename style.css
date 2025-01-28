@@ -24,6 +24,114 @@ header {
     flex-wrap: wrap;
 }
 
+/* Logo and Title Styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-container img {
+    height: 100px; /* Fixed size for logo */
+}
+
+.header-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Locked Tokens Box */
+.locked-tokens-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    max-width: 300px; /* Prevent box from growing too wide */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px; /* Fixed height to maintain structure */
+    position: relative;
+    overflow: hidden; /* Prevent content overflow */
+}
+
+.token-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.token {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.token img {
+    height: 40px; /* Fixed size for images */
+    width: 40px; /* Prevent images from growing */
+    max-width: 100%; /* Ensure images fit within their container */
+    max-height: 100%; /* Prevent overflow */
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+.token-value {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.operator {
+    font-size: 1.2rem;
+    font-weight: bold;
+    transform: translateY(-5px);
+}
+
+/* Locked Tokens Button */
+.locked-tokens-button {
+    margin-top: 5px;
+    background: linear-gradient(90deg, #00FF00, #008000);
+    color: white;
+    border: 2px solid #004400;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.locked-tokens-button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #008000, #00FF00);
+}
+
+/* Profile Box */
+.profile-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: white;
+    max-width: 300px; /* Prevent the box from growing */
+    height: auto; /* Let the box adjust dynamically */
+    position: relative;
+    font-size: 1rem;
+    overflow: hidden; /* Prevent content overflow */
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 /* Hamburger Menu */
 .hamburger-menu {
     position: absolute;
@@ -46,10 +154,6 @@ header {
 }
 
 .hamburger-menu img {
-    display: none; /* Hidden by default */
-}
-
-.mobile-burger {
     display: none;
 }
 
@@ -81,6 +185,15 @@ nav ul li a:hover {
     color: #FF4500;
 }
 
+/* Footer */
+footer {
+    background-color: #222;
+    text-align: center;
+    padding: 10px;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .logo-container {
@@ -89,12 +202,12 @@ nav ul li a:hover {
 
     .hamburger-menu img {
         display: block; /* Show image for mobile */
-        height: 40px; /* Larger size for burger button */
-        width: 40px;  /* Larger size for burger button */
-        cursor: pointer;
+        height: 40px; /* Adjusted size for mobile */
+        width: 40px; /* Adjusted size for mobile */
         position: absolute;
         top: 5px;
-        left: -15px; /* Shifted left inside the profile box */
+        left: -15px; /* Shifted left slightly */
+        cursor: pointer;
     }
 
     .hamburger-menu span {
@@ -102,17 +215,17 @@ nav ul li a:hover {
     }
 
     .locked-tokens-box {
-        max-width: 280px; /* Adjusted for mobile */
-        height: 180px; /* Compact display */
+        max-width: 280px; /* Compact size for mobile */
+        height: 180px; /* Adjusted height for mobile */
     }
 
     .token img {
-        height: 35px; /* Reduced size for mobile */
-        width: 35px; /* Reduced size for mobile */
-        object-fit: contain; /* Prevent scaling issues */
+        height: 35px; /* Smaller size for mobile images */
+        width: 35px;
+        object-fit: contain;
     }
 
     .token-value {
-        font-size: 0.9rem; /* Adjusted for readability */
+        font-size: 0.9rem; /* Adjusted font size for mobile */
     }
 }
