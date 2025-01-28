@@ -24,23 +24,6 @@ header {
     flex-wrap: wrap;
 }
 
-/* Logo and Title Styling */
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.logo-container img {
-    height: 80px;
-}
-
-.header-title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
-}
-
 /* Locked Tokens Box */
 .locked-tokens-box {
     background-color: rgba(255, 255, 255, 0.1);
@@ -113,17 +96,11 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 20px;
-    width: 25px;
+    height: 60px;
+    width: 60px;
+    background: url('BeFunky-design logo writing logo.png') no-repeat center center;
+    background-size: contain;
     cursor: pointer;
-}
-
-.hamburger-menu span {
-    background-color: white;
-    height: 3px;
-    width: 100%;
-    border-radius: 2px;
-    transition: all 0.3s ease;
 }
 
 /* Navigation Menu */
@@ -162,10 +139,6 @@ main {
     align-items: center;
     text-align: center;
     padding: 20px;
-}
-
-.welcome {
-    text-align: center;
 }
 
 .welcome h1 {
@@ -236,47 +209,5 @@ footer {
         align-items: center;
         padding: 5px 10px;
         max-width: 200px;
-    }
-
-    .hamburger-menu {
-        background: url('BeFunky-design logo writing logo.png') no-repeat center center;
-        background-size: contain;
-        height: 40px;
-        width: 40px;
-        border: none;
-    }
-
-    .hamburger-menu span {
-        display: none; /* Remove the default lines */
-    }
-
-    .logo-container img {
-        display: none; /* Hide logo from original position */
-    }
-}
-
-/* Desktop Locked Tokens Adjustment */
-@media (min-width: 768px) {
-    .locked-tokens-box {
-        margin: 0 auto; /* Center the box horizontally */
-        position: absolute; /* Remove from the normal document flow */
-        left: 50%; /* Move to the center */
-        transform: translateX(-50%); /* Adjust for the element's width */
-    }
-
-    .hamburger-menu span {
-        display: block; /* Restore hamburger button lines */
-    }
-
-    .hamburger-menu {
-        background: none; /* Remove logo from the burger button */
-    }
-
-    .logo-container img {
-        display: block; /* Show logo in its original position */
-    }
-
-    .header-title {
-        display: inline; /* Show the title next to the logo */
     }
 }
