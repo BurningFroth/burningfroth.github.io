@@ -32,12 +32,12 @@ header {
 }
 
 .logo-container img {
-    height: 70px; /* Adjusted size for desktop */
+    height: 70px;
     max-width: 100%;
 }
 
 .header-title {
-    font-size: 2rem; /* Increased size */
+    font-size: 2rem;
     font-weight: bold;
     color: white;
 }
@@ -50,7 +50,7 @@ header {
     text-align: center;
     color: white;
     max-width: 350px;
-    margin: 0 auto;
+    margin: 0 auto; /* Centered for desktop */
 }
 
 .locked-tokens-box h4 {
@@ -76,7 +76,7 @@ header {
 }
 
 .token img {
-    height: 50px; /* Increased size */
+    height: 50px;
     width: 50px;
 }
 
@@ -221,11 +221,11 @@ footer {
     }
 
     .logo-container img {
-        height: 50px; /* Increased size for mobile */
+        height: 50px;
     }
 
     .header-title {
-        display: none; /* Hide title on mobile */
+        display: none;
     }
 
     .locked-tokens-box {
