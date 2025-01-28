@@ -245,3 +245,12 @@ footer {
         max-width: 200px;
     }
 }
+/* Desktop Locked Tokens Adjustment */
+@media (min-width: 768px) {
+    .locked-tokens-box {
+        margin: 0 auto; /* Center the box horizontally */
+        position: absolute; /* Remove from the normal document flow */
+        left: 50%; /* Move to the center */
+        transform: translateX(-50%); /* Adjust for the element's width */
+    }
+}
