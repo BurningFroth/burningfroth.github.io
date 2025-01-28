@@ -44,25 +44,25 @@ header {
 /* Locked Tokens Box */
 .locked-tokens-box {
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 10px;
+    padding: 15px; /* Increased padding for better size */
     border-radius: 10px;
     text-align: center;
     color: white;
-    max-width: 350px;
+    max-width: 400px; /* Slightly larger width */
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    justify-content: flex-end; /* Align children to the bottom */
-    align-items: center; /* Center horizontally */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .locked-tokens-button {
     margin-top: 10px;
     background: linear-gradient(90deg, #00FF00, #008000);
-    color: black;
+    color: white; /* Changed text to white */
     border: 2px solid #004400;
     border-radius: 10px;
     padding: 10px 20px;
-    font-size: 1rem;
+    font-size: 1.2rem; /* Slightly larger font size */
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.2s, background 0.3s;
@@ -75,11 +75,11 @@ header {
 
 /* Token Display */
 .token-display {
-    order: 1; /* Keep the images and numbers at the top */
+    order: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 15px; /* Slightly larger gap for spacing */
 }
 
 .token {
@@ -90,16 +90,16 @@ header {
 }
 
 .token img {
-    height: 40px;
-    width: 40px;
+    height: 50px; /* Increased size for locked Froth display */
+    width: 50px;
 }
 
 .token-value {
-    font-size: 0.9rem;
+    font-size: 1rem; /* Slightly larger font size */
 }
 
 .operator {
-    font-size: 1.2rem;
+    font-size: 1.4rem; /* Increased operator size */
     font-weight: bold;
     transform: translateY(-5px);
 }
