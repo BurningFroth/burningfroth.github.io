@@ -124,16 +124,16 @@ header {
     width: 100%; /* Ensure text spans the full width */
 }
 
-/* Hamburger Menu (Navigation Button) */
+/* Hamburger Menu (Navigation Button) - Now 50% Bigger */
 .hamburger-menu {
     position: absolute;
-    top: 5px; /* Add small space from the top edge */
-    right: 5px; /* Add small space from the right edge */
+    top: 5px; /* Keep spacing from top */
+    right: 5px; /* Keep spacing from right */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 25px; /* Slightly larger height */
-    width: 25px; /* Slightly larger width */
+    height: 38px; /* 50% bigger (previously ~25px) */
+    width: 38px; /* 50% bigger (previously ~25px) */
     cursor: pointer;
 }
 
@@ -195,5 +195,10 @@ footer {
     .profile-box {
         max-width: 220px;
     }
-}
 
+    /* Increase hamburger menu for mobile as well */
+    .hamburger-menu {
+        height: 42px; /* Bigger on mobile */
+        width: 42px;
+    }
+}
