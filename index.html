@@ -47,82 +47,6 @@
         </ul>
     </nav>
 
-    <style>
-        nav {
-            background-color: #E6F2FF; /* Pale blue background */
-            padding: 15px;
-            border-radius: 10px;
-            display: none;
-            position: absolute;
-            top: 110px;
-            right: 10px;
-            width: 250px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: all 0.4s ease-in-out;
-        }
-
-        nav.show {
-            display: block;
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: black;
-            font-size: 1.2rem;
-            padding: 12px;
-            display: block;
-            text-align: center;
-            border-radius: 8px;
-            transition: background 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            background: rgba(0, 0, 0, 0.1);
-        }
-
-        .logout {
-            margin-top: 30px;
-            padding-top: 15px;
-            border-top: 2px solid rgba(0, 0, 0, 0.2);
-        }
-
-        @media (max-width: 768px) {
-            .logo-container {
-                display: none; /* Hide logo on mobile */
-            }
-
-            .locked-tokens-button-container {
-                left: 10px !important; /* Ensure it stays on the left for mobile */
-                transform: none !important;
-            }
-
-            nav {
-                position: absolute;
-                top: 110px;
-                right: -250px;
-                height: auto;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                transition: right 0.4s ease-in-out;
-            }
-
-            nav.show {
-                right: 0;
-            }
-        }
-    </style>
-
     <!-- Main Content -->
     <main>
         <div class="welcome">
@@ -132,7 +56,7 @@
     </main>
 
     <!-- Buttons Section -->
-    <div class="bottom-buttons">
+    <div class="bottom-buttons" style="position: absolute; bottom: 60px; width: 100%; display: flex; justify-content: center; gap: 20px;">
         <button>Buy</button>
         <button>Mint</button>
         <button>Burn</button>
@@ -140,7 +64,7 @@
     </div>
 
     <!-- Footer -->
-    <footer>
+    <footer style="position: absolute; bottom: 0; width: 100%; background-color: #222; color: #aaa; text-align: center; padding: 10px;">
         <p>© 2025 BurningFroth. All rights reserved.</p>
     </footer>
 
