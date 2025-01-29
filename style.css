@@ -114,14 +114,35 @@ header {
     width: auto;
     font-size: 0.9rem;
     overflow: hidden;
+    position: relative; /* Required for proper positioning of the menu button */
 }
 
+/* Profile Details */
 .profile-details {
     display: flex;
     flex-direction: column;
     gap: 5px;
     text-align: left; /* Align text to the left */
     width: 100%; /* Ensure text spans the full width */
+}
+
+/* Hamburger Menu (Navigation Button) */
+.hamburger-menu {
+    position: absolute;
+    top: 5px; /* Add small space from the top edge */
+    right: 5px; /* Add small space from the right edge */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px; /* Smaller height */
+    width: 20px; /* Smaller width */
+    cursor: pointer;
+}
+
+.hamburger-menu img {
+    display: block;
+    height: 100%; /* Ensure it scales to the container */
+    width: 100%;
 }
 
 /* Navigation Menu */
