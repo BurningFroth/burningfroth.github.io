@@ -56,11 +56,11 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 10px; /* Add more spacing between elements */
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    height: 120px;
+    height: auto;
 }
 
 /* Token Display */
@@ -76,14 +76,20 @@ header {
     object-fit: contain;
 }
 
+.token-value {
+    font-size: 0.9rem;
+    margin-top: 5px; /* Ensure numbers have some space under images */
+}
+
 .locked-tokens-button {
     background: linear-gradient(90deg, #00FF00, #008000);
     color: white;
     border-radius: 10px;
-    padding: 5px 10px;
-    font-size: 0.9rem;
+    padding: 10px 15px;
+    font-size: 1rem;
     cursor: pointer;
     transition: transform 0.2s ease;
+    margin-top: 15px; /* Pull the button further down */
 }
 
 .locked-tokens-button:hover {
@@ -208,9 +214,9 @@ footer {
     }
 
     .locked-tokens-button {
-        margin-top: 10px; /* Pull it slightly down */
-        padding: 10px 15px; /* Make the button bigger */
-        font-size: 1rem; /* Increase the font size */
+        margin-top: 20px; /* Pull the button further down on mobile */
+        padding: 12px 18px; /* Slightly larger padding for mobile */
+        font-size: 1.1rem; /* Larger font for better readability */
     }
 
     .profile-box {
@@ -226,4 +232,6 @@ footer {
         padding: 12px 20px;
         font-size: 1rem;
     }
+}
+
 }
