@@ -118,8 +118,15 @@
         const burgerButton = document.querySelector('.hamburger-menu img');
         const navMenu = document.querySelector('nav');
 
-        burgerButton.addEventListener('click', () => {
+        burgerButton.addEventListener('click', (event) => {
             navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+            event.stopPropagation(); // Prevent closing when clicking the button
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!navMenu.contains(event.target) && !burgerButton.contains(event.target)) {
+                navMenu.style.display = 'none';
+            }
         });
     </script>
 </body>
