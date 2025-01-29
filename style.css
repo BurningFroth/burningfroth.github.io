@@ -17,12 +17,12 @@ body {
 /* Header */
 header {
     background: linear-gradient(90deg, #FF4500, #FFBB33);
-    padding: 10px;
+    padding: 10px 10px;
     display: flex;
-    align-items: flex-start; /* Align elements to the top of the header */
+    align-items: center; /* Center content vertically */
     justify-content: center;
     position: relative;
-    min-height: 100px; /* Ensure header has enough height */
+    min-height: 140px; /* Slightly extend the header height */
 }
 
 /* Logo and Title Styling */
@@ -35,7 +35,7 @@ header {
 }
 
 .logo-container img {
-    height: 70px; /* Make the logo slightly bigger */
+    height: 70px; /* Keep the logo size slightly bigger */
     width: auto;
 }
 
@@ -60,7 +60,7 @@ header {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    height: 120px; /* Set a fixed height for consistency */
+    height: 120px; /* Keep the height of the box consistent */
 }
 
 /* Token Display */
