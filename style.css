@@ -17,12 +17,12 @@ body {
 /* Header */
 header {
     background: linear-gradient(90deg, #FF4500, #FFBB33);
-    padding: 15px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
-    min-height: 140px;
+    min-height: 100px; /* Adjusted header height */
 }
 
 /* Logo and Title */
@@ -35,7 +35,7 @@ header {
 }
 
 .logo-container img {
-    width: 105px; /* 50% bigger than before */
+    width: 105px; /* 50% bigger */
     height: 105px;
     object-fit: contain;
 }
@@ -52,6 +52,8 @@ header {
     justify-content: center;
     align-items: center;
     flex-grow: 1;
+    position: absolute;
+    left: 15px; /* Shifted left on mobile */
 }
 
 .locked-tokens-button {
@@ -59,7 +61,7 @@ header {
     color: white;
     border: none;
     border-radius: 10px;
-    padding: 15px 40px;
+    padding: 12px 30px;
     font-size: 1.2rem;
     cursor: pointer;
     transition: transform 0.2s ease;
@@ -99,8 +101,8 @@ header {
     position: absolute;
     top: 10px;
     right: 10px;
-    width: 50px;
-    height: 50px;
+    width: 40px; /* Reduced size */
+    height: 40px;
     cursor: pointer;
 }
 
@@ -202,12 +204,16 @@ footer {
     }
 
     .hamburger-menu img {
-        width: 45px;
-        height: 45px;
+        width: 35px;
+        height: 35px;
     }
 
     .locked-tokens-button {
         font-size: 1rem;
-        padding: 12px 25px;
+        padding: 10px 25px;
+    }
+
+    .locked-tokens-button-container {
+        left: 10px; /* Move further left on mobile */
     }
 }
