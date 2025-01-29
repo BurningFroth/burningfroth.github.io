@@ -25,6 +25,98 @@ header {
     min-height: 140px;
 }
 
+/* Logo and Title Styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 10px;
+    gap: 10px;
+}
+
+.logo-container img {
+    height: 70px;
+    width: auto;
+}
+
+.header-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Locked Tokens Box */
+.locked-tokens-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: auto;
+}
+
+/* Token Display - Fixed Image Sizing */
+.token-display {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.token img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.token-value {
+    font-size: 1rem;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* Locked Tokens Button */
+.locked-tokens-button {
+    background: linear-gradient(90deg, #00FF00, #008000);
+    color: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin-top: 15px;
+}
+
+.locked-tokens-button:hover {
+    transform: scale(1.1);
+}
+
+/* Profile Box */
+.profile-box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 250px;
+    font-size: 0.85rem;
+    height: 120px;
+}
+
 /* Navigation Menu */
 nav {
     position: absolute;
@@ -50,15 +142,10 @@ nav ul.show {
     display: flex;
 }
 
-nav ul li {
-    text-align: left;
-}
-
 nav ul li a {
-    display: block;
     padding: 10px;
-    text-decoration: none;
     color: white;
+    text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
     border-radius: 5px;
@@ -69,85 +156,22 @@ nav ul li a:hover {
     background: rgba(255, 255, 255, 0.2);
 }
 
-nav ul .logout a {
-    color: #FF4500;
-    font-weight: bold;
-}
-
-/* Hamburger Menu */
-.hamburger-menu {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    height: 45px;
-    width: 45px;
-    cursor: pointer;
-}
-
-.hamburger-menu img {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-/* Main Content */
-main {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-/* Buttons Section */
-.bottom-buttons {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.bottom-buttons button {
-    background: linear-gradient(90deg, #FF6A00, #FF4500);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 15px 25px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.2s, background 0.3s;
-}
-
-.bottom-buttons button:hover {
-    transform: scale(1.1);
-    background: linear-gradient(90deg, #FF4500, #FF6A00);
-}
-
-/* Footer */
-footer {
-    background-color: #222;
-    color: #aaa;
-    text-align: center;
-    padding: 10px;
-    margin-top: auto;
-}
-
 /* Mobile-Specific Adjustments */
 @media (max-width: 768px) {
     .logo-container {
         display: none;
     }
 
-    nav {
-        width: 160px;
-        right: 10px;
+    .locked-tokens-box {
+        max-width: 280px;
     }
 
-    .bottom-buttons {
-        bottom: 15px;
+    .token img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .profile-box {
+        right: 10px;
     }
 }
