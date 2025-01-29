@@ -163,15 +163,21 @@ nav ul li a:hover {
     border-top: 2px solid rgba(0, 0, 0, 0.2);
 }
 
-/* Mobile-Specific Navigation */
+/* Mobile-Specific Adjustments */
 @media (max-width: 768px) {
     .logo-container {
         display: none; /* Hide logo on mobile */
     }
 
+    .locked-tokens-button-container {
+        position: absolute;
+        left: 10px; /* Shifted to the left side */
+        transform: none;
+    }
+
     nav {
         position: absolute;
-        top: 110px; /* Keeps it under the header */
+        top: 110px;
         right: -250px;
         height: auto;
         display: flex;
