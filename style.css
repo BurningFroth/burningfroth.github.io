@@ -20,22 +20,26 @@ header {
     padding: 10px 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Space out Locked Tokens and Profile */
-    flex-wrap: nowrap;
+    justify-content: center; /* Center the Locked Tokens Display */
     position: relative;
-    min-height: 80px; /* Ensure header stays tall enough for all elements */
+    min-height: 100px; /* Ensure enough height for all elements */
 }
 
 /* Locked Tokens Box */
 .locked-tokens-box {
-    max-width: 240px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    max-width: 280px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 5px;
+    gap: 5px;
+    position: absolute; /* Center it dynamically */
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Token Display */
@@ -46,8 +50,8 @@ header {
 }
 
 .token img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
 }
 
@@ -56,7 +60,7 @@ header {
     color: white;
     border-radius: 10px;
     padding: 5px 10px;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     cursor: pointer;
     transition: transform 0.2s ease;
 }
@@ -67,33 +71,37 @@ header {
 
 /* Profile Box */
 .profile-box {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 10px;
     position: absolute;
     top: 10px;
     right: 10px;
-    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px;
     max-width: 250px;
+    font-size: 0.85rem;
 }
 
+/* Profile Details */
 .profile-details {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    font-size: 0.85rem;
+    text-align: left;
+    width: 100%;
 }
 
 /* Hamburger Menu (Navigation Button) */
 .hamburger-menu {
-    align-self: flex-end; /* Align it to the top-right corner inside the profile box */
-    height: 25px; /* Adjusted to a proper size */
-    width: 25px;
+    position: absolute;
+    top: 5px; /* Adjusted to place it inside the profile box */
+    right: 5px; /* Adjusted to align with the top-right corner */
+    height: 38px; /* 55% larger than original size */
+    width: 38px;
     cursor: pointer;
-    margin-top: 5px; /* Add slight spacing */
 }
 
 .hamburger-menu img {
@@ -106,7 +114,7 @@ header {
 nav ul {
     display: none;
     flex-direction: column;
-    background-color: #fff;
+    background-color: white;
     padding: 10px;
     border-radius: 8px;
     position: absolute;
@@ -130,22 +138,23 @@ footer {
 /* Mobile Specific Adjustments */
 @media (max-width: 768px) {
     .logo-container {
-        display: none;
+        display: none; /* Hide logo and title */
     }
 
     .locked-tokens-box {
         position: absolute;
-        left: 10px;
+        left: 10px; /* Align Locked Tokens Display to far left */
         top: 10px;
+        transform: none; /* Remove centering adjustments for mobile */
     }
 
     .profile-box {
-        right: 10px;
+        right: 10px; /* Align Profile Display to far right */
     }
 
     .hamburger-menu {
-        height: 30px; /* Slightly larger for mobile */
-        width: 30px;
+        height: 45px; /* Slightly larger for mobile for accessibility */
+        width: 45px;
     }
 }
 
