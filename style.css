@@ -201,14 +201,17 @@ main {
 
 /* Buttons Section */
 .bottom-buttons {
-    position: absolute;
-    bottom: 20px;
+    position: absolute; /* Position above the footer */
+    bottom: 60px; /* Adjust space above the footer */
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
+/* Style for Buttons */
 .bottom-buttons button {
     background: linear-gradient(90deg, #FF6A00, #FF4500);
     color: white;
@@ -232,14 +235,31 @@ footer {
     color: #aaa;
     text-align: center;
     padding: 10px;
-    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Desktop-Specific Adjustments */
+@media (min-width: 769px) {
+    .bottom-buttons {
+        bottom: 80px; /* Adjust so it sits just above the footer */
+    }
 }
 
 /* Mobile-Specific Adjustments */
 @media (max-width: 768px) {
-    .logo-container {
-        display: none; /* Hide logo and title on mobile */
+    .bottom-buttons {
+        bottom: 15px;
+        gap: 10px;
     }
+
+    .bottom-buttons button {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+}
+
 
     .locked-tokens-box {
         position: absolute;
