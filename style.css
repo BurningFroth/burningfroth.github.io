@@ -180,7 +180,9 @@ footer {
 
     .locked-tokens-box {
         max-width: 240px;
-        margin-left: 10px; /* Shift it close to the left edge, matching profile display spacing */
+        position: absolute; /* Ensure it can be moved */
+        left: 10px; /* Move it to the far left */
+        top: 10px; /* Adjust position in the header */
     }
 
     .token img {
@@ -203,4 +205,5 @@ footer {
         width: 42px;
     }
 }
+
 
