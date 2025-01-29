@@ -51,9 +51,9 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 1;
     position: absolute;
-    left: 15px; /* Shifted left */
+    left: 50%; /* Centered on desktop */
+    transform: translateX(-50%);
 }
 
 .locked-tokens-button {
@@ -82,9 +82,9 @@ header {
     gap: 5px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 12px;
-    padding: 15px;
-    min-width: 280px;
-    min-height: 60px; /* Adjusted to hold larger numbers */
+    padding: 10px;
+    min-width: 168px; /* Reduced width by 40% */
+    min-height: 36px; /* Reduced height by 40% */
 }
 
 /* Profile Details */
@@ -200,7 +200,8 @@ footer {
 
     .profile-box {
         right: 10px;
-        max-width: 200px;
+        max-width: 140px; /* Reduce profile box width by 40% */
+        min-height: 36px; /* Ensure smaller height */
     }
 
     .hamburger-menu img {
@@ -208,12 +209,12 @@ footer {
         height: 35px;
     }
 
+    .locked-tokens-button-container {
+        left: 10px; /* Move further left on mobile */
+    }
+
     .locked-tokens-button {
         font-size: 1rem;
         padding: 10px 25px;
-    }
-
-    .locked-tokens-button-container {
-        left: 10px; /* Move further left on mobile */
     }
 }
