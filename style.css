@@ -43,6 +43,58 @@ header {
     color: white;
 }
 
+/* Locked Tokens Box */
+.locked-tokens-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto; /* Let it adjust dynamically */
+    overflow: hidden; /* Prevent overflow issues */
+    gap: 5px; /* Add spacing between elements */
+}
+
+/* Token Display */
+.token-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.token img {
+    height: 40px;
+    width: 40px;
+    object-fit: contain; /* Prevent stretching */
+}
+
+.token-value {
+    font-size: 0.9rem;
+}
+
+/* Locked Tokens Button */
+.locked-tokens-button {
+    background: linear-gradient(90deg, #00FF00, #008000);
+    color: white;
+    border: 2px solid #004400;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.locked-tokens-button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #008000, #00FF00);
+}
+
 /* Profile Box */
 .profile-box {
     display: flex;
@@ -70,6 +122,7 @@ header {
     text-align: right; /* Align text to the right */
 }
 
+/* Hamburger Menu */
 .hamburger-menu {
     display: flex;
     flex-direction: column;
@@ -91,50 +144,37 @@ header {
 }
 
 .hamburger-menu img {
-    display: none; /* Hide on desktop */
+    display: block;
+    height: 35px;
+    width: 35px;
 }
 
-/* Locked Tokens Box */
-.locked-tokens-box {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-    color: white;
-    max-width: 280px;
-    display: flex;
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: none;
     flex-direction: column;
-    align-items: center;
-    height: auto; /* Let it adjust dynamically */
-    overflow: hidden; /* Prevent overflow issues */
+    gap: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
 }
 
-/* Token Display */
-.token img {
-    height: 40px;
-    width: 40px;
-    object-fit: contain; /* Prevent stretching */
-}
-
-/* Bottom Buttons Section */
-.bottom-buttons {
+nav ul.show {
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 20px;
-    margin-top: auto; /* Push it above the footer */
 }
 
-.bottom-buttons button {
-    background: linear-gradient(90deg, #FF6A00, #FF4500);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 1rem;
+nav ul li a {
+    color: black;
+    text-decoration: none;
     font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.2s, background 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FF4500;
 }
 
 /* Footer */
@@ -144,24 +184,22 @@ footer {
     padding: 10px;
     color: #aaa;
     font-size: 0.9rem;
-    width: 100%; /* Ensure it spans the full width */
-    margin-top: auto; /* Pin it to the bottom of the screen */
+    width: 100%;
+    margin-top: auto;
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .logo-container {
-        display: none; /* Hide logo and title on mobile */
+        display: none; /* Hide logo and title */
     }
 
-    .hamburger-menu img {
-        display: block; /* Show hamburger menu image */
-        height: 35px;
-        width: 35px;
+    .locked-tokens-box {
+        max-width: 260px;
     }
 
-    .hamburger-menu span {
-        display: none; /* Hide lines on mobile */
+    .token img {
+        height: 30px;
+        width: 30px;
     }
 }
-
