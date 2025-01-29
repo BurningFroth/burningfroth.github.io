@@ -48,15 +48,15 @@ header {
 /* Locked Tokens Box */
 .locked-tokens-box {
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 12px;
+    padding: 10px;
     border-radius: 10px;
     text-align: center;
     color: white;
-    max-width: 300px;
+    max-width: 280px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 10px; /* Add more spacing between elements */
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -67,21 +67,20 @@ header {
 .token-display {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 5px;
 }
 
 .token img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
 }
 
 .token-value {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-top: 6px;
+    font-size: 0.9rem;
+    margin-top: 5px; /* Ensure numbers have some space under images */
 }
 
-/* Locked Tokens Button */
 .locked-tokens-button {
     background: linear-gradient(90deg, #00FF00, #008000);
     color: white;
@@ -90,7 +89,11 @@ header {
     font-size: 1rem;
     cursor: pointer;
     transition: transform 0.2s ease;
-    margin-top: 15px;
+    margin-top: 15px; /* Pull the button further down */
+}
+
+.locked-tokens-button:hover {
+    transform: scale(1.1);
 }
 
 /* Profile Box */
@@ -106,23 +109,71 @@ header {
     border-radius: 10px;
     padding: 10px;
     max-width: 250px;
-    font-size: 1rem;
+    font-size: 0.85rem;
     height: 120px;
+}
+
+/* Profile Details */
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left;
+    width: 100%;
+}
+
+/* Hamburger Menu (Navigation Button) */
+.hamburger-menu {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+}
+
+.hamburger-menu img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Navigation Menu */
+nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+}
+
+nav ul.show {
+    display: flex;
+}
+
+/* Main Content */
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 /* Buttons Section */
 .bottom-buttons {
     position: absolute;
-    bottom: 80px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 20px;
     width: 100%;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-/* Button Styling */
 .bottom-buttons button {
     background: linear-gradient(90deg, #FF6A00, #FF4500);
     color: white;
@@ -132,10 +183,12 @@ header {
     font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
 }
 
 .bottom-buttons button:hover {
     transform: scale(1.1);
+    background: linear-gradient(90deg, #FF4500, #FF6A00);
 }
 
 /* Footer */
@@ -144,28 +197,42 @@ footer {
     color: #aaa;
     text-align: center;
     padding: 10px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    margin-top: auto;
 }
 
 /* Mobile-Specific Adjustments */
 @media (max-width: 768px) {
     .logo-container {
-        display: none;
+        display: none; /* Hide logo and title on mobile */
+    }
+
+    .locked-tokens-box {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        transform: none;
+        height: auto; /* Let content determine height */
+        padding-bottom: 5px; /* Reduce padding to bring up the bottom of the box */
+    }
+
+    .locked-tokens-button {
+        margin-top: 20px; /* Leave the button in place */
+        padding: 12px 18px;
+        font-size: 1.1rem;
+    }
+
+    .profile-box {
+        right: 10px;
+        height: auto; /* Ensures alignment with locked tokens box */
     }
 
     .bottom-buttons {
         bottom: 15px;
+        gap: 10px;
     }
 
-    .locked-tokens-box {
-        max-width: 280px;
-        padding-bottom: 5px;
-    }
-
-    .token img {
-        width: 45px;
-        height: 45px;
+    .bottom-buttons button {
+        padding: 12px 20px;
+        font-size: 1rem;
     }
 }
