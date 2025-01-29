@@ -1,62 +1,15 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #111;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Header */
-header {
-    background: linear-gradient(90deg, #FF4500, #FFBB33);
-    padding: 10px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    min-height: 140px;
-}
-
-/* Logo and Title Styling */
-.logo-container {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    left: 10px;
-    gap: 10px;
-}
-
-.logo-container img {
-    height: 70px;
-    width: auto;
-}
-
-.header-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: white;
-}
-
 /* Locked Tokens Box */
 .locked-tokens-box {
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 10px;
+    padding: 12px;
     border-radius: 10px;
     text-align: center;
     color: white;
-    max-width: 280px;
+    max-width: 300px; /* Slightly increased width */
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px; /* Add more spacing between elements */
+    gap: 8px; /* Add more spacing between elements */
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -67,20 +20,22 @@ header {
 .token-display {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px; /* More spacing for better visibility */
 }
 
 .token img {
-    width: 40px;
-    height: 40px;
+    width: 50px; /* Increased image size */
+    height: 50px;
     object-fit: contain;
 }
 
 .token-value {
-    font-size: 0.9rem;
-    margin-top: 5px; /* Ensure numbers have some space under images */
+    font-size: 1rem; /* Slightly bigger text */
+    font-weight: bold;
+    margin-top: 6px; /* Ensure numbers have some space under images */
 }
 
+/* Locked Tokens Button (Unchanged) */
 .locked-tokens-button {
     background: linear-gradient(90deg, #00FF00, #008000);
     color: white;
@@ -89,150 +44,26 @@ header {
     font-size: 1rem;
     cursor: pointer;
     transition: transform 0.2s ease;
-    margin-top: 15px; /* Pull the button further down */
+    margin-top: 15px;
 }
 
 .locked-tokens-button:hover {
     transform: scale(1.1);
 }
 
-/* Profile Box */
-.profile-box {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 10px;
-    max-width: 250px;
-    font-size: 0.85rem;
-    height: 120px;
-}
-
-/* Profile Details */
-.profile-details {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    text-align: left;
-    width: 100%;
-}
-
-/* Hamburger Menu (Navigation Button) */
-.hamburger-menu {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    height: 45px;
-    width: 45px;
-    cursor: pointer;
-}
-
-.hamburger-menu img {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-/* Navigation Menu */
-nav ul {
-    display: none;
-    flex-direction: column;
-    background-color: white;
-    padding: 10px;
-    border-radius: 8px;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-}
-
-nav ul.show {
-    display: flex;
-}
-
-/* Main Content */
-main {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-/* Buttons Section */
-.bottom-buttons {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.bottom-buttons button {
-    background: linear-gradient(90deg, #FF6A00, #FF4500);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 15px 25px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.2s, background 0.3s;
-}
-
-.bottom-buttons button:hover {
-    transform: scale(1.1);
-    background: linear-gradient(90deg, #FF4500, #FF6A00);
-}
-
-/* Footer */
-footer {
-    background-color: #222;
-    color: #aaa;
-    text-align: center;
-    padding: 10px;
-    margin-top: auto;
-}
-
 /* Mobile-Specific Adjustments */
 @media (max-width: 768px) {
-    .logo-container {
-        display: none; /* Hide logo and title on mobile */
-    }
-
     .locked-tokens-box {
-        position: absolute;
-        left: 10px;
-        top: 10px;
-        transform: none;
-        height: auto; /* Let content determine height */
-        padding-bottom: 5px; /* Reduce padding to bring up the bottom of the box */
+        max-width: 280px; /* Keep it slightly smaller for mobile */
+        padding-bottom: 5px;
     }
 
-    .locked-tokens-button {
-        margin-top: 20px; /* Leave the button in place */
-        padding: 12px 18px;
-        font-size: 1.1rem;
+    .token img {
+        width: 45px; /* Adjust size for mobile */
+        height: 45px;
     }
 
-    .profile-box {
-        right: 10px;
-        height: auto; /* Ensures alignment with locked tokens box */
-    }
-
-    .bottom-buttons {
-        bottom: 15px;
-        gap: 10px;
-    }
-
-    .bottom-buttons button {
-        padding: 12px 20px;
-        font-size: 1rem;
+    .token-value {
+        font-size: 0.95rem;
     }
 }
