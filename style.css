@@ -25,104 +25,56 @@ header {
     min-height: 140px;
 }
 
-/* Logo and Title Styling */
-.logo-container {
-    display: flex;
-    align-items: center;
+/* Navigation Menu */
+nav {
     position: absolute;
-    left: 10px;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    display: none;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul {
+    list-style: none;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
     gap: 10px;
 }
 
-.logo-container img {
-    height: 70px;
-    width: auto;
-}
-
-.header-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: white;
-}
-
-/* Locked Tokens Box */
-.locked-tokens-box {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-    color: white;
-    max-width: 280px;
+nav ul.show {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px; /* Add more spacing between elements */
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    height: auto;
 }
 
-/* Token Display */
-.token-display {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.token img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-}
-
-.token-value {
-    font-size: 0.9rem;
-    margin-top: 5px; /* Ensure numbers have some space under images */
-}
-
-.locked-tokens-button {
-    background: linear-gradient(90deg, #00FF00, #008000);
-    color: white;
-    border-radius: 10px;
-    padding: 10px 15px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-    margin-top: 15px; /* Pull the button further down */
-}
-
-.locked-tokens-button:hover {
-    transform: scale(1.1);
-}
-
-/* Profile Box */
-.profile-box {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 10px;
-    max-width: 250px;
-    font-size: 0.85rem;
-    height: 120px;
-}
-
-/* Profile Details */
-.profile-details {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+nav ul li {
     text-align: left;
-    width: 100%;
 }
 
-/* Hamburger Menu (Navigation Button) */
+nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+nav ul .logout a {
+    color: #FF4500;
+    font-weight: bold;
+}
+
+/* Hamburger Menu */
 .hamburger-menu {
     position: absolute;
     top: 5px;
@@ -136,22 +88,6 @@ header {
     display: block;
     width: 100%;
     height: 100%;
-}
-
-/* Navigation Menu */
-nav ul {
-    display: none;
-    flex-direction: column;
-    background-color: white;
-    padding: 10px;
-    border-radius: 8px;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-}
-
-nav ul.show {
-    display: flex;
 }
 
 /* Main Content */
@@ -203,36 +139,15 @@ footer {
 /* Mobile-Specific Adjustments */
 @media (max-width: 768px) {
     .logo-container {
-        display: none; /* Hide logo and title on mobile */
+        display: none;
     }
 
-    .locked-tokens-box {
-        position: absolute;
-        left: 10px;
-        top: 10px;
-        transform: none;
-        height: auto; /* Let content determine height */
-        padding-bottom: 5px; /* Reduce padding to bring up the bottom of the box */
-    }
-
-    .locked-tokens-button {
-        margin-top: 20px; /* Leave the button in place */
-        padding: 12px 18px;
-        font-size: 1.1rem;
-    }
-
-    .profile-box {
+    nav {
+        width: 160px;
         right: 10px;
-        height: auto; /* Ensures alignment with locked tokens box */
     }
 
     .bottom-buttons {
         bottom: 15px;
-        gap: 10px;
-    }
-
-    .bottom-buttons button {
-        padding: 12px 20px;
-        font-size: 1rem;
     }
 }
