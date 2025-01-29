@@ -165,11 +165,15 @@ nav ul li a:hover {
 
 /* Mobile-Specific Navigation */
 @media (max-width: 768px) {
+    .logo-container {
+        display: none; /* Hide logo on mobile */
+    }
+
     nav {
-        position: fixed;
-        top: 0;
+        position: absolute;
+        top: 110px; /* Keeps it under the header */
         right: -250px;
-        height: 100vh;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
