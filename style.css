@@ -68,8 +68,8 @@ header {
 }
 
 .token img {
-    height: 40px;
-    width: 40px;
+    height: 35px; /* Adjusted size for mobile */
+    width: 35px;
     object-fit: contain; /* Prevent stretching */
 }
 
@@ -83,8 +83,8 @@ header {
     color: white;
     border: 2px solid #004400;
     border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 8px 15px; /* Reduced padding for mobile */
+    font-size: 0.9rem; /* Adjusted font size for mobile */
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.2s, background 0.3s;
@@ -105,13 +105,13 @@ header {
     background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
     border-radius: 10px;
     color: white;
-    max-width: 250px; /* Restrict width */
+    max-width: 240px; /* Restrict width */
     width: 100%; /* Ensure consistency across resolutions */
     height: auto; /* Dynamically adjust height */
     position: absolute; /* Position within the header */
     top: 10px; /* Position relative to the top of the header */
     right: 10px; /* Position relative to the right of the header */
-    font-size: 0.9rem; /* Adjust text size */
+    font-size: 0.85rem; /* Adjust text size */
     overflow: hidden; /* Prevent content overflow */
 }
 
@@ -123,33 +123,13 @@ header {
 }
 
 /* Hamburger Menu */
-.hamburger-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 25px;
-    width: 30px;
-    cursor: pointer;
-    position: absolute; /* Absolute positioning */
-    top: 10px; /* Align with the top of the profile box */
-    right: 10px; /* Align to the right */
-}
-
-.hamburger-menu span {
-    background-color: white;
-    height: 3px;
-    width: 100%;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
 .hamburger-menu img {
     display: block;
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
 }
 
-/* Navigation Menu */
 nav ul {
     list-style: none;
     display: none;
@@ -167,16 +147,6 @@ nav ul.show {
     display: flex;
 }
 
-nav ul li a {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #FF4500;
-}
-
 /* Footer */
 footer {
     background-color: #222;
@@ -188,18 +158,27 @@ footer {
     margin-top: auto;
 }
 
-/* Mobile Responsive */
+/* Mobile Specific Adjustments */
 @media (max-width: 768px) {
     .logo-container {
         display: none; /* Hide logo and title */
     }
 
     .locked-tokens-box {
-        max-width: 260px;
+        max-width: 240px;
     }
 
     .token img {
         height: 30px;
         width: 30px;
+    }
+
+    .locked-tokens-button {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
+
+    .profile-box {
+        max-width: 220px;
     }
 }
