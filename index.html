@@ -47,6 +47,51 @@
         </ul>
     </nav>
 
+    <style>
+        nav {
+            background-color: #E6F2FF; /* Pale blue background */
+            padding: 15px;
+            border-radius: 10px;
+            display: none;
+            position: absolute;
+            top: 110px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Spaced out menu items */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.2rem;
+            padding: 12px;
+            display: block;
+            text-align: center;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .logout {
+            margin-top: 30px; /* Larger spacing for logout */
+            padding-top: 15px;
+            border-top: 2px solid rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
     <!-- Main Content -->
     <main>
         <div class="welcome">
@@ -71,10 +116,10 @@
     <!-- JavaScript for Hamburger Menu -->
     <script>
         const burgerButton = document.querySelector('.hamburger-menu img');
-        const navMenu = document.querySelector('nav ul');
+        const navMenu = document.querySelector('nav');
 
         burgerButton.addEventListener('click', () => {
-            navMenu.classList.toggle('show');
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
         });
     </script>
 </body>
