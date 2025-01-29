@@ -19,10 +19,10 @@ header {
     background: linear-gradient(90deg, #FF4500, #FFBB33);
     padding: 10px 10px;
     display: flex;
-    align-items: center; /* Center content vertically */
-    justify-content: center;
+    align-items: center;
+    justify-content: center; /* Space out Locked Tokens and Profile */
     position: relative;
-    min-height: 140px; /* Slightly extend the header height */
+    min-height: 140px; /* Slightly extended height */
 }
 
 /* Logo and Title Styling */
@@ -35,7 +35,7 @@ header {
 }
 
 .logo-container img {
-    height: 70px; /* Keep the logo size slightly bigger */
+    height: 70px;
     width: auto;
 }
 
@@ -60,7 +60,7 @@ header {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    height: 120px; /* Keep the height of the box consistent */
+    height: 120px;
 }
 
 /* Token Display */
@@ -104,7 +104,7 @@ header {
     padding: 10px;
     max-width: 250px;
     font-size: 0.85rem;
-    height: 120px; /* Match the height of Locked Tokens Box */
+    height: 120px;
 }
 
 /* Profile Details */
@@ -192,6 +192,29 @@ footer {
     text-align: center;
     padding: 10px;
     margin-top: auto;
+}
+
+/* Desktop Specific Adjustments */
+@media (min-width: 769px) {
+    .locked-tokens-box {
+        font-size: 1rem; /* Slightly larger font for desktop */
+        padding: 15px; /* Slightly larger padding for visual appeal */
+    }
+
+    .token-display img {
+        width: 50px; /* Increase icon size */
+        height: 50px;
+    }
+
+    .locked-tokens-button {
+        font-size: 1rem; /* Increase button font size */
+        padding: 10px 15px; /* Larger button for desktop */
+    }
+
+    .profile-box {
+        font-size: 1rem; /* Slightly larger text in profile box */
+        padding: 15px; /* Increase padding for desktop */
+    }
 }
 
 /* Mobile Specific Adjustments */
