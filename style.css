@@ -110,13 +110,6 @@ header {
 }
 
 /* Token Display */
-.token-display {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
 .token img {
     height: 40px;
     width: 40px;
@@ -142,11 +135,6 @@ header {
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.2s, background 0.3s;
-}
-
-.bottom-buttons button:hover {
-    transform: scale(1.1);
-    background: linear-gradient(90deg, #FF4500, #FF6A00);
 }
 
 /* Footer */
@@ -175,13 +163,5 @@ footer {
     .hamburger-menu span {
         display: none; /* Hide lines on mobile */
     }
-
-    .locked-tokens-box {
-        max-width: 260px; /* Adjust size for mobile */
-    }
-
-    .token img {
-        height: 30px; /* Smaller size for mobile images */
-        width: 30px;
-    }
 }
+
