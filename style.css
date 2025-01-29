@@ -22,7 +22,7 @@ header {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    min-height: 110px; /* Slightly taller header */
+    min-height: 110px; /* Adjusted header height */
 }
 
 /* Logo and Title */
@@ -210,7 +210,8 @@ footer {
     }
 
     .locked-tokens-button-container {
-        left: 10px; /* Move further left on mobile */
+        left: 10px !important; /* Shifted left on mobile */
+        transform: none !important;
     }
 
     .locked-tokens-button {
