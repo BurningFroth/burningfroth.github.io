@@ -171,8 +171,8 @@ nav ul li a:hover {
 
     .locked-tokens-button-container {
         position: absolute;
-        left: 10px; /* Shifted to the left side */
-        transform: none;
+        left: 10px !important; /* Shifted to the left side */
+        transform: none !important;
     }
 
     nav {
