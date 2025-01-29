@@ -20,7 +20,7 @@ header {
     padding: 10px 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Space out Locked Tokens and Profile */
+    justify-content: center; /* Space out Locked Tokens and Profile */
     position: relative;
     min-height: 100px; /* Ensure enough height for all elements */
 }
@@ -35,12 +35,12 @@ header {
 }
 
 .logo-container img {
-    height: 50px; /* Make the logo smaller */
+    height: 70px; /* Make the logo slightly bigger */
     width: auto; /* Maintain aspect ratio */
 }
 
 .header-title {
-    font-size: 2.5rem; /* Make the title bigger */
+    font-size: 2.5rem; /* Keep the title prominent */
     font-weight: bold;
     color: white;
 }
@@ -117,16 +117,16 @@ header {
 /* Hamburger Menu (Navigation Button) */
 .hamburger-menu {
     position: absolute;
-    top: 5px; /* Adjusted to place it inside the profile box */
-    right: 5px; /* Adjusted to align with the top-right corner */
-    height: 38px; /* 55% larger than original size */
+    top: 5px;
+    right: 5px;
+    height: 38px;
     width: 38px;
     cursor: pointer;
 }
 
 .hamburger-menu img {
     display: block;
-    width: 100%; /* Scale to the container */
+    width: 100%;
     height: 100%;
 }
 
@@ -144,6 +144,43 @@ nav ul {
 
 nav ul.show {
     display: flex;
+}
+
+/* Main Content */
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Buttons Section */
+.bottom-buttons {
+    position: absolute; /* Ensure buttons stay at the bottom of the main display */
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.bottom-buttons button {
+    background: linear-gradient(90deg, #FF6A00, #FF4500);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.bottom-buttons button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #FF4500, #FF6A00);
 }
 
 /* Footer */
@@ -173,7 +210,17 @@ footer {
     }
 
     .hamburger-menu {
-        height: 45px; /* Slightly larger for mobile for accessibility */
+        height: 45px;
         width: 45px;
+    }
+
+    .bottom-buttons {
+        bottom: 15px;
+        gap: 10px; /* Smaller gap on mobile */
+    }
+
+    .bottom-buttons button {
+        padding: 12px 20px;
+        font-size: 1rem;
     }
 }
