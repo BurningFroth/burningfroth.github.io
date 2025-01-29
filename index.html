@@ -12,51 +12,29 @@
     <header>
         <!-- Logo and Title -->
         <div class="logo-container">
-            <img src="BeFunky-design logo writing logo.png" alt="BurningFroth Logo">
-            <span class="header-title">BurningFroth</span>
+            <img src="BeFunky-design logo writing logo.png" alt="BurningFroth Logo" class="logo">
         </div>
 
-        <!-- Locked Tokens Display -->
-        <div class="locked-tokens-box">
-            <div class="token-display">
-                <div class="token">
-                    <img src="BeFunky-design liquidity token.png" alt="Liquidity Token">
-                    <span class="token-value">40</span>
-                </div>
-                <span class="operator">+</span>
-                <div class="token">
-                    <img src="BeFunky-design foth logo.png" alt="Froth Token">
-                    <span class="token-value">250</span>
-                </div>
-                <span class="operator">=</span>
-                <div class="token">
-                    <img src="BeFunky-design flame boost.png" alt="Flame Boost">
-                    <span class="token-value">75</span>
-                </div>
-            </div>
+        <!-- Locked Tokens Button -->
+        <div class="locked-tokens-button-container">
             <button class="locked-tokens-button">Locked Tokens</button>
         </div>
 
-        <!-- Profile Box -->
-        <div class="profile-box">
-            <div class="profile-details">
-                <span>Flow: 120</span>
-                <span>Froth: 250</span>
-                <span>Burn Token: 75</span>
-                <span>Liquidity Token: 40</span>
-            </div>
-            <div class="hamburger-menu">
-                <img src="BeFunky-design burningfroth burger button.png" alt="Menu Button">
-            </div>
+        <!-- Navigation Menu Button -->
+        <div class="hamburger-menu">
+            <img src="BeFunky-design burningfroth burger button new logo 2.png" alt="Menu Button">
         </div>
     </header>
 
     <!-- Navigation Menu -->
     <nav>
         <ul class="menu">
+            <li><a href="#">Profile</a></li>
             <li><a href="#">Leaderboards</a></li>
             <li><a href="#">Milestones</a></li>
             <li><a href="#">Marketplace</a></li>
+            <li><a href="#">Help</a></li>
+            <li class="logout"><a href="#">Log Out</a></li>
         </ul>
     </nav>
 
@@ -81,7 +59,7 @@
         <p>© 2025 BurningFroth. All rights reserved.</p>
     </footer>
 
-    <!-- Add JavaScript for Hamburger Menu -->
+    <!-- JavaScript for Hamburger Menu -->
     <script>
         const burgerButton = document.querySelector('.hamburger-menu img');
         const navMenu = document.querySelector('nav ul');
@@ -91,4 +69,4 @@
         });
     </script>
 </body>
-</html>   
+</html>
