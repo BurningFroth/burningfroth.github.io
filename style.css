@@ -11,145 +11,96 @@ body {
     color: white;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure the body takes up at least the full screen height */
+    min-height: 100vh;
 }
 
 /* Header */
 header {
     background: linear-gradient(90deg, #FF4500, #FFBB33);
-    padding: 10px 20px;
+    padding: 10px 10px;
     display: flex;
     align-items: center;
-    justify-content: center; /* Center the Locked Tokens Display horizontally */
+    justify-content: space-between; /* Space out Locked Tokens and Profile */
     flex-wrap: nowrap;
     position: relative;
-}
-
-/* Logo and Title Styling */
-.logo-container {
-    position: absolute; /* Keep the logo positioned to the left */
-    left: 10px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-shrink: 0; /* Prevent shrinking */
-}
-
-.logo-container img {
-    height: 80px; /* Adjusted for better size consistency */
-    width: auto; /* Maintain aspect ratio */
-}
-
-.header-title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
+    min-height: 80px; /* Ensure header stays tall enough for all elements */
 }
 
 /* Locked Tokens Box */
 .locked-tokens-box {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-    color: white;
-    max-width: 280px;
+    max-width: 240px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: auto; /* Let it adjust dynamically */
-    gap: 5px; /* Add spacing between elements */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 5px;
 }
 
 /* Token Display */
 .token-display {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .token img {
-    height: 40px;
-    width: 40px;
-    object-fit: contain; /* Prevent stretching */
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
 }
 
-.token-value {
-    font-size: 0.9rem;
-}
-
-/* Locked Tokens Button */
 .locked-tokens-button {
     background: linear-gradient(90deg, #00FF00, #008000);
     color: white;
-    border: 2px solid #004400;
     border-radius: 10px;
-    padding: 8px 15px;
-    font-size: 0.9rem;
-    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 0.85rem;
     cursor: pointer;
-    transition: transform 0.2s, background 0.3s;
+    transition: transform 0.2s ease;
 }
 
 .locked-tokens-button:hover {
     transform: scale(1.1);
-    background: linear-gradient(90deg, #008000, #00FF00);
 }
 
 /* Profile Box */
 .profile-box {
-    position: absolute; /* Keep the profile box positioned on the right */
-    right: 10px; /* Adjusted slightly to pull it left */
-    top: 10px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align text to the left side */
-    gap: 5px; /* Add spacing between items */
-    padding: 10px;
+    align-items: flex-start;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    color: white;
-    max-width: 250px; /* Prevent breakout issues */
-    font-size: 0.9rem;
-    overflow: hidden;
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: auto;
 }
 
-/* Profile Details */
 .profile-details {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    text-align: left; /* Align text to the left */
-    width: 100%; /* Ensure text spans the full width */
+    font-size: 0.85rem;
 }
 
-/* Hamburger Menu (Navigation Button) - Now 50% Bigger */
+/* Hamburger Menu */
 .hamburger-menu {
     position: absolute;
-    top: 5px; /* Keep spacing from top */
-    right: 5px; /* Keep spacing from right */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 38px; /* 50% bigger (previously ~25px) */
-    width: 38px; /* 50% bigger (previously ~25px) */
+    top: 5px;
+    right: 5px;
+    height: 40px;
+    width: 40px;
     cursor: pointer;
-}
-
-.hamburger-menu img {
-    display: block;
-    height: 100%; /* Ensure it scales to the container */
-    width: 100%;
 }
 
 /* Navigation Menu */
 nav ul {
-    list-style: none;
     display: none;
     flex-direction: column;
-    gap: 10px;
-    background-color: white;
+    background-color: #fff;
     padding: 10px;
     border-radius: 8px;
     position: absolute;
@@ -164,45 +115,26 @@ nav ul.show {
 /* Footer */
 footer {
     background-color: #222;
+    color: #aaa;
     text-align: center;
     padding: 10px;
-    color: #aaa;
-    font-size: 0.9rem;
-    width: 100%;
     margin-top: auto;
 }
 
 /* Mobile Specific Adjustments */
 @media (max-width: 768px) {
     .logo-container {
-        display: none; /* Hide logo and title */
+        display: none;
     }
 
     .locked-tokens-box {
-        max-width: 240px;
-        position: absolute; /* Ensure it can be moved */
-        left: 10px; /* Move it to the far left */
-        top: 10px; /* Adjust position in the header */
-    }
-
-    .token img {
-        height: 30px;
-        width: 30px;
-    }
-
-    .locked-tokens-button {
-        padding: 8px 15px;
-        font-size: 0.85rem;
+        position: absolute;
+        left: 10px;
+        top: 10px;
     }
 
     .profile-box {
-        max-width: 220px;
-    }
-
-    /* Increase hamburger menu for mobile */
-    .hamburger-menu {
-        height: 42px; /* Bigger on mobile */
-        width: 42px;
+        right: 10px;
     }
 }
 
