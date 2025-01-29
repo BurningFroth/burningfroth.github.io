@@ -22,7 +22,7 @@ header {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    min-height: 110px; /* Adjusted header height */
+    min-height: 110px; /* Adjusted to ensure profile box fits */
 }
 
 /* Logo and Title */
@@ -52,7 +52,7 @@ header {
     justify-content: center;
     align-items: center;
     position: absolute;
-    left: 50%; /* Centered on desktop */
+    left: 50%;
     transform: translateX(-50%);
 }
 
@@ -74,7 +74,7 @@ header {
 /* Profile Box */
 .profile-box {
     position: absolute;
-    top: 5px;
+    top: 5px; /* Ensures it stays inside the header */
     right: 10px;
     display: flex;
     flex-direction: column;
@@ -82,16 +82,18 @@ header {
     gap: 5px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 12px;
-    padding: 10px;
-    min-width: 168px; /* Reduced width by 40% */
-    min-height: 36px; /* Reduced height by 40% */
+    padding: 8px; /* Reduced padding to fit inside header */
+    min-width: 168px;
+    min-height: 32px; /* Slightly reduced height */
+    display: flex;
+    align-items: center;
 }
 
 /* Profile Details */
 .profile-details {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 3px;
     text-align: left;
     width: 100%;
 }
@@ -200,8 +202,8 @@ footer {
 
     .profile-box {
         right: 10px;
-        max-width: 140px; /* Reduce profile box width by 40% */
-        min-height: 36px; /* Ensure smaller height */
+        max-width: 140px;
+        min-height: 32px; /* Adjusted to fit inside the header */
     }
 
     .hamburger-menu img {
