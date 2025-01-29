@@ -10,7 +10,7 @@
 <body>
     <!-- Header -->
     <header style="min-height: 110px; display: flex; align-items: center;"> <!-- Ensuring Profile Box sits fully inside -->
-        <!-- Logo and Title -->
+        <!-- Logo and Title (Hidden on Mobile) -->
         <div class="logo-container">
             <img src="BeFunky-design logo writing logo.png" alt="BurningFroth Logo" class="logo">
             <span class="header-title">BurningFroth</span>
@@ -97,11 +97,15 @@
         }
 
         @media (max-width: 768px) {
+            .logo-container {
+                display: none; /* Hide logo on mobile */
+            }
+
             nav {
-                position: fixed;
-                top: 0;
+                position: absolute;
+                top: 110px;
                 right: -250px;
-                height: 100vh;
+                height: auto;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -153,4 +157,3 @@
     </script>
 </body>
 </html>
-
