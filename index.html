@@ -17,7 +17,7 @@
         </div>
 
         <!-- Locked Tokens Button -->
-        <div class="locked-tokens-button-container" style="position: absolute; left: 50%; transform: translateX(-50%);"> <!-- Centered on desktop -->
+        <div class="locked-tokens-button-container" style="position: absolute; left: 10px; transform: none;"> <!-- Shifted left on mobile -->
             <button class="locked-tokens-button">Locked Tokens</button>
         </div>
 
@@ -99,6 +99,11 @@
         @media (max-width: 768px) {
             .logo-container {
                 display: none; /* Hide logo on mobile */
+            }
+
+            .locked-tokens-button-container {
+                left: 10px !important; /* Ensure it stays on the left */
+                transform: none !important;
             }
 
             nav {
