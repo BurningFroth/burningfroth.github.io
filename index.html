@@ -18,6 +18,7 @@
 
         <!-- Locked Tokens Display -->
         <div class="locked-tokens-box">
+            <h4>Locked Tokens</h4>
             <div class="token-display">
                 <div class="token">
                     <img src="BeFunky-design liquidity token.png" alt="Liquidity Token">
@@ -25,7 +26,7 @@
                 </div>
                 <span class="operator">+</span>
                 <div class="token">
-                    <img src="BeFunky-design foth logo.png" alt="Froth Token">
+                   <img src="BeFunky-design foth logo.png" alt="Froth Token">
                     <span class="token-value">250</span>
                 </div>
                 <span class="operator">=</span>
@@ -46,7 +47,9 @@
                 <span>Liquidity Token: 40</span>
             </div>
             <div class="hamburger-menu">
-                <img src="BeFunky-design burningfroth burger button.png" alt="Menu Button">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </header>
@@ -81,12 +84,12 @@
         <p>© 2025 BurningFroth. All rights reserved.</p>
     </footer>
 
-    <!-- Add JavaScript for Hamburger Menu -->
+    <!-- JavaScript for Hamburger Menu -->
     <script>
-        const burgerButton = document.querySelector('.hamburger-menu img');
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
         const navMenu = document.querySelector('nav ul');
 
-        burgerButton.addEventListener('click', () => {
+        hamburgerMenu.addEventListener('click', () => {
             navMenu.classList.toggle('show');
         });
     </script>
