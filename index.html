@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header style="min-height: 110px;"> <!-- Slightly increased header height -->
+    <header style="min-height: 110px; display: flex; align-items: center;"> <!-- Ensuring Profile Box sits fully inside -->
         <!-- Logo and Title -->
         <div class="logo-container">
             <img src="BeFunky-design logo writing logo.png" alt="BurningFroth Logo" class="logo">
@@ -22,7 +22,7 @@
         </div>
 
         <!-- Profile Box -->
-        <div class="profile-box" style="position: absolute; top: 5px; right: 10px; padding: 10px; border-radius: 12px; min-width: 168px; min-height: 36px;"> <!-- Reduced size by 40% -->
+        <div class="profile-box" style="position: absolute; top: 5px; right: 10px; padding: 10px; border-radius: 12px; min-width: 168px; min-height: 36px; display: flex; align-items: center;"> <!-- Adjusted to fully fit inside the header -->
             <div class="profile-details">
                 <span>Flow: 120</span>
                 <span>Froth: 250</span>
@@ -34,15 +34,6 @@
             </div>
         </div>
     </header>
-
-    <style>
-        @media (max-width: 768px) {
-            .locked-tokens-button-container {
-                left: 20px !important; /* Slightly moved to the right on mobile */
-                transform: none !important;
-            }
-        }
-    </style>
 
     <!-- Navigation Menu -->
     <nav>
