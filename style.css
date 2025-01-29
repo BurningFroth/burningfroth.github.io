@@ -12,6 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    position: relative;
 }
 
 /* Header */
@@ -163,6 +164,44 @@ nav ul li a:hover {
     border-top: 2px solid rgba(0, 0, 0, 0.2);
 }
 
+/* Buttons Section */
+.bottom-buttons {
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.bottom-buttons button {
+    background: linear-gradient(90deg, #FF6A00, #FF4500);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.bottom-buttons button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #FF4500, #FF6A00);
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #222;
+    color: #aaa;
+    text-align: center;
+    padding: 10px;
+}
+
 /* Mobile-Specific Adjustments */
 @media (max-width: 768px) {
     .logo-container {
@@ -190,4 +229,3 @@ nav ul li a:hover {
         right: 0;
     }
 }
-
