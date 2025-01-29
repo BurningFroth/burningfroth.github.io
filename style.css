@@ -72,11 +72,12 @@ header {
     align-items: flex-start;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    padding: 5px;
+    padding: 10px;
     position: absolute;
     top: 10px;
     right: 10px;
     width: auto;
+    max-width: 250px;
 }
 
 .profile-details {
@@ -86,14 +87,19 @@ header {
     font-size: 0.85rem;
 }
 
-/* Hamburger Menu */
+/* Hamburger Menu (Navigation Button) */
 .hamburger-menu {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    height: 40px;
-    width: 40px;
+    align-self: flex-end; /* Align it to the top-right corner inside the profile box */
+    height: 25px; /* Adjusted to a proper size */
+    width: 25px;
     cursor: pointer;
+    margin-top: 5px; /* Add slight spacing */
+}
+
+.hamburger-menu img {
+    display: block;
+    width: 100%; /* Scale to the container */
+    height: 100%;
 }
 
 /* Navigation Menu */
@@ -136,6 +142,10 @@ footer {
     .profile-box {
         right: 10px;
     }
-}
 
+    .hamburger-menu {
+        height: 30px; /* Slightly larger for mobile */
+        width: 30px;
+    }
+}
 
