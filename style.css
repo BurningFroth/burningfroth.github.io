@@ -20,9 +20,29 @@ header {
     padding: 10px 10px;
     display: flex;
     align-items: center;
-    justify-content: center; /* Center the Locked Tokens Display */
+    justify-content: space-between; /* Space out Locked Tokens and Profile */
     position: relative;
     min-height: 100px; /* Ensure enough height for all elements */
+}
+
+/* Logo and Title Styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 10px; /* Align logo to the far-left */
+    gap: 10px; /* Space between logo and title */
+}
+
+.logo-container img {
+    height: 50px; /* Make the logo smaller */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.header-title {
+    font-size: 2.5rem; /* Make the title bigger */
+    font-weight: bold;
+    color: white;
 }
 
 /* Locked Tokens Box */
@@ -138,7 +158,7 @@ footer {
 /* Mobile Specific Adjustments */
 @media (max-width: 768px) {
     .logo-container {
-        display: none; /* Hide logo and title */
+        display: none; /* Hide logo and title on mobile */
     }
 
     .locked-tokens-box {
@@ -157,4 +177,3 @@ footer {
         width: 45px;
     }
 }
-
