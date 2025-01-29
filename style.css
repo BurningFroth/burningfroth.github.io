@@ -99,8 +99,8 @@ header {
 
 /* Profile Box */
 .profile-box {
-    position: absolute; /* Position the profile box to the right */
-    right: 10px;
+    position: absolute; /* Keep the profile box positioned on the right */
+    right: 0; /* Align it to the far right of the header */
     top: 10px;
     display: flex;
     flex-direction: column;
@@ -111,10 +111,8 @@ header {
     border-radius: 10px;
     color: white;
     max-width: 250px; /* Prevent breakout issues */
-    width: auto;
     font-size: 0.9rem;
     overflow: hidden;
-    position: relative; /* Required for proper positioning of the menu button */
 }
 
 /* Profile Details */
@@ -134,8 +132,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 20px; /* Smaller height */
-    width: 20px; /* Smaller width */
+    height: 25px; /* Slightly larger height */
+    width: 25px; /* Slightly larger width */
     cursor: pointer;
 }
 
@@ -198,3 +196,4 @@ footer {
         max-width: 220px;
     }
 }
+
