@@ -121,8 +121,8 @@ header {
     position: absolute;
     top: 5px;
     right: 5px;
-    height: 38px;
-    width: 38px;
+    height: 45px;
+    width: 45px;
     cursor: pointer;
 }
 
@@ -194,34 +194,6 @@ footer {
     margin-top: auto;
 }
 
-/* Desktop-Specific Adjustments */
-@media (min-width: 769px) {
-    .hamburger-menu {
-        height: 45px; /* Increase size by 20% */
-        width: 45px;
-    }
-
-    .locked-tokens-box {
-        font-size: 1rem;
-        padding: 15px;
-    }
-
-    .token-display img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .locked-tokens-button {
-        font-size: 1rem;
-        padding: 10px 15px;
-    }
-
-    .profile-box {
-        font-size: 1rem;
-        padding: 15px;
-    }
-}
-
 /* Mobile-Specific Adjustments */
 @media (max-width: 768px) {
     .logo-container {
@@ -235,13 +207,14 @@ footer {
         transform: none;
     }
 
-    .profile-box {
-        right: 10px;
+    .locked-tokens-button {
+        margin-top: 10px; /* Pull it slightly down */
+        padding: 10px 15px; /* Make the button bigger */
+        font-size: 1rem; /* Increase the font size */
     }
 
-    .hamburger-menu {
-        height: 45px;
-        width: 45px;
+    .profile-box {
+        right: 10px;
     }
 
     .bottom-buttons {
