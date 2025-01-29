@@ -180,6 +180,7 @@ footer {
 
     .locked-tokens-box {
         max-width: 240px;
+        margin-left: 10px; /* Shift it close to the left edge, matching profile display spacing */
     }
 
     .token img {
@@ -196,9 +197,10 @@ footer {
         max-width: 220px;
     }
 
-    /* Increase hamburger menu for mobile as well */
+    /* Increase hamburger menu for mobile */
     .hamburger-menu {
         height: 42px; /* Bigger on mobile */
         width: 42px;
     }
 }
+
