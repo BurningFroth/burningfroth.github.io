@@ -211,16 +211,19 @@ footer {
         left: 10px;
         top: 10px;
         transform: none;
+        height: auto; /* Let content determine height */
+        padding-bottom: 5px; /* Reduce padding to bring up the bottom of the box */
     }
 
     .locked-tokens-button {
-        margin-top: 20px; /* Pull the button further down on mobile */
-        padding: 12px 18px; /* Slightly larger padding for mobile */
-        font-size: 1.1rem; /* Larger font for better readability */
+        margin-top: 20px; /* Leave the button in place */
+        padding: 12px 18px;
+        font-size: 1.1rem;
     }
 
     .profile-box {
         right: 10px;
+        height: auto; /* Ensures alignment with locked tokens box */
     }
 
     .bottom-buttons {
@@ -232,6 +235,4 @@ footer {
         padding: 12px 20px;
         font-size: 1rem;
     }
-}
-
 }
