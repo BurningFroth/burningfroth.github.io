@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header style="min-height: 110px; display: flex; align-items: center; width: 100%;"> <!-- Ensuring Profile Box sits fully inside -->
+    <header style="min-height: 110px; display: flex; align-items: center; width: 100%; overflow-x: hidden;"> <!-- Ensuring Profile Box sits fully inside -->
         <!-- Logo and Title (Hidden on Mobile) -->
         <div class="logo-container">
             <img src="BeFunky-design logo writing logo.png" alt="BurningFroth Logo" class="logo">
@@ -36,7 +36,7 @@
     </header>
 
     <!-- Navigation Menu -->
-    <nav>
+    <nav style="right: -100%; transition: right 0.4s ease-in-out;">
         <ul class="menu">
             <li><a href="#">Profile</a></li>
             <li><a href="#">Leaderboards</a></li>
@@ -48,7 +48,7 @@
     </nav>
 
     <!-- Main Content -->
-    <main style="flex-grow: 1; width: 100%; display: flex; justify-content: center; align-items: center;">
+    <main style="flex-grow: 1; width: 100%; display: flex; justify-content: center; align-items: center; overflow-x: hidden;">
         <div class="welcome" style="text-align: center; max-width: 90vw;">
             <h1>Welcome to BurningFroth</h1>
             <p>Explore the future of Froth-burning milestones and leaderboards!</p>
@@ -74,15 +74,20 @@
         const navMenu = document.querySelector('nav');
 
         burgerButton.addEventListener('click', (event) => {
-            navMenu.classList.toggle('show');
+            if (navMenu.style.right === "0px") {
+                navMenu.style.right = "-100%";
+            } else {
+                navMenu.style.right = "0px";
+            }
             event.stopPropagation();
         });
 
         document.addEventListener('click', (event) => {
             if (!navMenu.contains(event.target) && !burgerButton.contains(event.target)) {
-                navMenu.classList.remove('show');
+                navMenu.style.right = "-100%";
             }
         });
     </script>
 </body>
 </html>
+
