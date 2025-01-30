@@ -36,7 +36,7 @@
     </header>
 
     <!-- Navigation Menu -->
-    <nav style="right: -100%; transition: right 0.4s ease-in-out;">
+    <nav class="nav-menu">
         <ul class="menu">
             <li><a href="#">Profile</a></li>
             <li><a href="#">Leaderboards</a></li>
@@ -71,20 +71,16 @@
     <!-- JavaScript for Hamburger Menu -->
     <script>
         const burgerButton = document.querySelector('.hamburger-menu img');
-        const navMenu = document.querySelector('nav');
+        const navMenu = document.querySelector('.nav-menu');
 
         burgerButton.addEventListener('click', (event) => {
-            if (navMenu.style.right === "0px") {
-                navMenu.style.right = "-100%";
-            } else {
-                navMenu.style.right = "0px";
-            }
+            navMenu.classList.toggle('show');
             event.stopPropagation();
         });
 
         document.addEventListener('click', (event) => {
             if (!navMenu.contains(event.target) && !burgerButton.contains(event.target)) {
-                navMenu.style.right = "-100%";
+                navMenu.classList.remove('show');
             }
         });
     </script>
