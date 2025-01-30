@@ -13,6 +13,8 @@ body {
     flex-direction: column;
     min-height: 100vh;
     position: relative;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -24,6 +26,7 @@ header {
     justify-content: space-between;
     position: relative;
     min-height: 110px;
+    width: 100%;
 }
 
 /* Logo and Title */
@@ -214,6 +217,13 @@ footer {
         transform: none !important;
     }
 
+    main {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     nav {
         position: absolute;
         top: 110px; /* Keeps it under the header */
@@ -228,4 +238,10 @@ footer {
     nav.show {
         right: 0;
     }
+
+    body {
+        width: 100vw;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
 }
+
