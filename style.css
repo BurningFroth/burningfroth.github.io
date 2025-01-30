@@ -27,6 +27,7 @@ header {
     position: relative;
     min-height: 110px;
     width: 100%;
+    overflow-x: hidden;
 }
 
 /* Logo and Title */
@@ -124,16 +125,17 @@ nav {
     display: none;
     position: absolute;
     top: 110px;
-    right: 10px;
+    right: -100%;
     width: 250px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.4s ease-in-out;
+    transition: right 0.4s ease-in-out;
+    overflow-x: hidden;
 }
 
 nav.show {
     display: block;
     opacity: 1;
-    transform: translateY(0);
+    right: 0;
 }
 
 /* Navigation Menu List */
@@ -227,7 +229,7 @@ footer {
     nav {
         position: absolute;
         top: 110px; /* Keeps it under the header */
-        right: -250px;
+        right: -100%;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -244,4 +246,3 @@ footer {
         overflow-x: hidden; /* Prevent horizontal scrolling */
     }
 }
-
