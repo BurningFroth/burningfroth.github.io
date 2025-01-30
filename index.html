@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>BurningFroth</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Header -->
-    <header style="min-height: 110px; display: flex; align-items: center;"> <!-- Ensuring Profile Box sits fully inside -->
+    <header style="min-height: 110px; display: flex; align-items: center; width: 100%;"> <!-- Ensuring Profile Box sits fully inside -->
         <!-- Logo and Title (Hidden on Mobile) -->
         <div class="logo-container">
             <img src="BeFunky-design logo writing logo.png" alt="BurningFroth Logo" class="logo">
@@ -48,8 +48,8 @@
     </nav>
 
     <!-- Main Content -->
-    <main>
-        <div class="welcome">
+    <main style="flex-grow: 1; width: 100%; display: flex; justify-content: center; align-items: center;">
+        <div class="welcome" style="text-align: center; max-width: 90vw;">
             <h1>Welcome to BurningFroth</h1>
             <p>Explore the future of Froth-burning milestones and leaderboards!</p>
         </div>
